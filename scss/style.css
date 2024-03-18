@@ -321,9 +321,9 @@ template {
 }
 
 .menu {
-  background-color: aqua;
+  background-color: white;
   justify-content: flex-start;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 .menu__logo {
   background-color: pink;
@@ -332,7 +332,6 @@ template {
   padding: 1em;
 }
 .menu__nav {
-  background-color: purple;
   justify-content: space-between;
 }
 .menu__nav button {
@@ -341,6 +340,7 @@ template {
   font-size: 16px;
   padding: 1em;
   border: 0;
+  box-shadow: none;
   cursor: pointer;
 }
 

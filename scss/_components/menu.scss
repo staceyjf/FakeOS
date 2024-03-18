@@ -9,10 +9,10 @@
 }
 
 .menu {
-  background-color: aqua;
+  background-color: white;
   @extend %flex-align-center;
   justify-content: flex-start;
-  padding: 1rem;
+  padding: 0.5rem;
 
   // logo
   &__logo {
@@ -22,16 +22,16 @@
 
   // nav
   &__nav {
-    background-color: purple;
     @extend %flex-align-center;
     justify-content: space-between;
 
     & button {
       background-color: pink;
       @include bv.menuLinkStyle;
-      // resetting a button
+      // resetting a default button appearance
       border: 0;
-      cursor: pointer; // change cursor to pointer on hover
+      box-shadow: none;
+      cursor: pointer;
     }
   }
 }
