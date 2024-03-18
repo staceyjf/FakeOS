@@ -3,16 +3,12 @@
 @use "../_partials/site-standardization";
 @use "../_partials/brand-variables" as bv;
 
-%flex-align-center {
-  display: flex;
-  align-items: center;
-}
-
 .menu {
   background-color: white;
   @extend %flex-align-center;
   justify-content: flex-start;
   padding: 0.5rem;
+  column-gap: 15px;
 
   // logo
   &__logo {
@@ -24,6 +20,7 @@
   &__nav {
     @extend %flex-align-center;
     justify-content: space-between;
+    column-gap: 15px;
 
     & button {
       background-color: pink;

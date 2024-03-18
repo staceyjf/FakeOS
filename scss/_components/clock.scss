@@ -1,6 +1,11 @@
+@use "../_partials/normalisation";
+@use "../_partials/site-standardization";
+@use "../_partials/brand-variables" as bv;
+
 .clock {
-  background-color: blue;
-  height: 50px;
-  width: 100vw;
-  display: flex;
+  border: 5px red solid;
+  background-color: bv.$secondary-color;
+  @extend %flex-align-center;
+  justify-content: flex-end;
+  padding: 0.5rem;
 }

@@ -315,7 +315,7 @@ template {
   margin: 0;
 }
 
-.menu__nav, .menu {
+.clock, .menu, .menu__nav {
   display: flex;
   align-items: center;
 }
@@ -324,6 +324,7 @@ template {
   background-color: white;
   justify-content: flex-start;
   padding: 0.5rem;
+  column-gap: 15px;
 }
 .menu__logo {
   background-color: pink;
@@ -333,6 +334,7 @@ template {
 }
 .menu__nav {
   justify-content: space-between;
+  column-gap: 15px;
 }
 .menu__nav button {
   background-color: pink;
@@ -345,16 +347,16 @@ template {
 }
 
 .desktop {
-  background-color: green;
+  background-color: #828282;
   flex-grow: 1;
   display: grid;
 }
 
 .clock {
-  background-color: blue;
-  height: 50px;
-  width: 100vw;
-  display: flex;
+  border: 5px red solid;
+  background-color: #828282;
+  justify-content: flex-end;
+  padding: 0.5rem;
 }
 
 body {
