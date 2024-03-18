@@ -1,20 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Press+Start+2P&display=swap");
+
 $primary-color: black;
 $secondary-color: #828282;
 $dark-color: #191919;
 $light-color: #e9ecea;
 
-@mixin font-stack {
-  $font: "Heebo", sans-serif;
+$font-family-primary: "Press Start 2P";
+$font-family-secondary: "IBM Plex Sans";
+
+// taking the fonts weight as params for easy customisation
+@mixin font-stack(
+  $font-weight-primary: normal,
+  $font-weight-secondary: normal
+) {
+  font-family: $font-family-primary, system-ui;
+  font-weight: $font-weight-primary;
+  font-family: $font-family-secondary, sans-serif;
+  font-weight: $font-weight-secondary;
   line-height: 1.6;
+}
+
+%flex-align-center {
+  display: flex;
+  align-items: center;
 }
 
 @mixin menuLinkStyle {
   text-decoration: none;
   font-size: 16px;
   padding: 1em;
-}
-
-%flex-align-center {
-  display: flex;
-  align-items: center;
 }
