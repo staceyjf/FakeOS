@@ -1,16 +1,33 @@
-.menu {
+// partials
+@use "../_partials/normalisation";
+@use "../_partials/site-standardization";
+@use "../_partials/brand-variables" as bv;
+
+%flex-align-center {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background-color: #333;
+}
+
+.menu {
+  background-color: aqua;
+  @extend %flex-align-center;
+  justify-content: flex-start;
   padding: 1rem;
 
-  &.logo {
-    color: #fff;
+  // logo
+  &__logo {
+    background-color: pink;
+    @include bv.menuLinkStyle;
   }
 
-  &.nav a {
-    color: #fff;
-    margin-left: 1rem;
+  // nav
+  &__nav {
+    background-color: purple;
+    @extend %flex-align-center;
+    justify-content: space-between;
+
+    & a {
+      @include bv.menuLinkStyle;
+    }
   }
 }

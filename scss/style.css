@@ -315,23 +315,30 @@ template {
   margin: 0;
 }
 
-a {
-  text-decoration: none;
+.menu__nav, .menu {
+  display: flex;
+  align-items: center;
 }
 
 .menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #333;
+  background-color: aqua;
+  justify-content: flex-start;
   padding: 1rem;
 }
-.menu.logo {
-  color: #fff;
+.menu__logo {
+  background-color: pink;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 1em;
 }
-.menu.nav a {
-  color: #fff;
-  margin-left: 1rem;
+.menu__nav {
+  background-color: purple;
+  justify-content: space-between;
+}
+.menu__nav a {
+  text-decoration: none;
+  font-size: 16px;
+  padding: 1em;
 }
 
 .desktop {
