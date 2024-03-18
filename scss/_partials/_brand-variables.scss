@@ -1,0 +1,9 @@
+$primary-color: #d30c7b;
+$secondary-color: #c2e812;
+$dark-color: #191919;
+$light-color: #e9ecea;
+
+@mixin font-stack {
+  $font: "Heebo", sans-serif;
+  line-height: 1.6;
+}

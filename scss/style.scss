@@ -1,0 +1,17 @@
+// partials
+@use "./_partials/normalisation";
+@use "./_partials/site-standardization";
+@use "./_partials/brand-variables" as bv;
+
+// components
+@use "./_components/menu.scss";
+@use "./_components/desktop.scss";
+@use "./_components/clock.scss";
+
+//body
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
