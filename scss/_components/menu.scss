@@ -26,8 +26,12 @@
     @extend %flex-align-center;
     justify-content: space-between;
 
-    & a {
+    & button {
+      background-color: pink;
       @include bv.menuLinkStyle;
+      // resetting a button
+      border: 0;
+      cursor: pointer; // change cursor to pointer on hover
     }
   }
 }

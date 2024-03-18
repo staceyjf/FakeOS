@@ -335,10 +335,13 @@ template {
   background-color: purple;
   justify-content: space-between;
 }
-.menu__nav a {
+.menu__nav button {
+  background-color: pink;
   text-decoration: none;
   font-size: 16px;
   padding: 1em;
+  border: 0;
+  cursor: pointer;
 }
 
 .desktop {
