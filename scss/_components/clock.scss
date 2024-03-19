@@ -8,36 +8,29 @@ footer {
   justify-content: flex-end;
 }
 
-.time {
-  background: white;
-  @extend %box-shadow-border-all;
-  display: flex;
-  flex-direction: column;
-  margin: 0 0.5em 0.5em 0;
-  row-gap: 1em;
-  padding: 0.75em;
-}
-
 .clock {
-  &__wrapper {
-    @extend %flex-row-align-center;
-    justify-content: center;
+  &__container {
+    background: white;
+    @extend %box-shadow-border-all;
+    @extend %flex-row-center-center;
+    margin: 0 0.5em 0.5em 0;
     column-gap: 1.5em;
-    // margin: 0 0.5em 0.5em 0;
-    // padding: 0.75rem;
+    padding: 0.75em;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
   }
 
   &--close {
-    @extend %flex-row-center-center;
+    align-self: flex-start;
   }
 
   &__display {
     @include bv.font--primary(400);
     min-width: fit-content;
     @extend %flex-row-align-center;
-
-    &--date {
-      justify-content: flex-end;
-    }
   }
 }
