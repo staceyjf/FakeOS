@@ -3,6 +3,15 @@
 @use "../_partials/site-standardization";
 @use "../_partials/brand-variables" as bv;
 
+// menu a
+%linkStyle {
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 1em;
+  @include bv.font--primary(400);
+}
+
 .menu {
   background-color: white;
   @extend %flex-align-center;
@@ -13,7 +22,7 @@
   // logo
   &__logo {
     background-color: pink;
-    @include bv.linkStyle;
+    @extend %linkStyle;
   }
 
   // nav
@@ -24,7 +33,7 @@
 
     & button {
       background-color: pink;
-      @include bv.linkStyle;
+      @extend %linkStyle;
       // resetting a default button appearance
       border: 0;
       box-shadow: none;

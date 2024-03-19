@@ -322,6 +322,17 @@ template {
   align-items: center;
 }
 
+.menu__nav button, .menu__logo {
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 1em;
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.15em;
+}
+
 .menu {
   background-color: white;
   justify-content: flex-start;
@@ -330,13 +341,6 @@ template {
 }
 .menu__logo {
   background-color: pink;
-  color: black;
-  text-decoration: none;
-  font-size: 16px;
-  padding: 1em;
-  font-family: "Press Start 2P", system-ui;
-  font-weight: 400;
-  line-height: 1.6;
 }
 .menu__nav {
   justify-content: space-between;
@@ -344,13 +348,6 @@ template {
 }
 .menu__nav button {
   background-color: pink;
-  color: black;
-  text-decoration: none;
-  font-size: 16px;
-  padding: 1em;
-  font-family: "Press Start 2P", system-ui;
-  font-weight: 400;
-  line-height: 1.6;
   border: 0;
   box-shadow: none;
   cursor: pointer;
@@ -359,7 +356,10 @@ template {
 .desktop {
   background-color: #828282;
   flex-grow: 1;
-  display: grid;
+  overflow-x: hidden;
+  position: relative;
+  background: url(../../assets/bg.svg) repeat;
+  background-size: 4px 4px;
 }
 
 .clock {

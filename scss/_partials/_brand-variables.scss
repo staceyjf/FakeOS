@@ -11,6 +11,7 @@ $light-color: #e9ecea;
   font-family: "Press Start 2P", system-ui; //Chicago
   font-weight: $weight;
   line-height: 1.6;
+  letter-spacing: 0.15em;
 }
 
 @mixin font--secondary($weight) {
@@ -22,13 +23,4 @@ $light-color: #e9ecea;
 %flex-align-center {
   display: flex;
   align-items: center;
-}
-
-// menu a
-@mixin linkStyle {
-  color: black;
-  text-decoration: none;
-  font-size: 16px;
-  padding: 1em;
-  @include font--primary(400);
 }
