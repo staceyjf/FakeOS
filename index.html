@@ -28,12 +28,19 @@
     <main class="desktop"></main>
 
     <footer>
-      <div class="clock__wrapper">
-        <!-- TO DO: amend this so it closes the clock -->
-        <div class="clock--close">
-          <img src="./assets/controls/Close.svg" alt="Close icon" />
+      <div class="time">
+        <div class="clock__wrapper">
+          <!-- TO DO: amend this so it closes the clock -->
+          <div class="clock--close">
+            <img src="./assets/controls/Close.svg" alt="Close icon" />
+          </div>
+          <!-- TO DO: dynically update the clock based on users time -->
+          <div class="clock__display clock__display--time">12:00:19</div>
         </div>
-        <div class="clock__display">12:00</div>
+        <div class="clock__wrapper">
+          <!-- TO DO: dynically update the clock based on users time -->
+          <div class="clock__display clock__display--date">4:06:21</div>
+        </div>
       </div>
     </footer>
   </body>

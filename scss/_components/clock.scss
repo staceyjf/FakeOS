@@ -8,15 +8,23 @@ footer {
   justify-content: flex-end;
 }
 
+.time {
+  background: white;
+  @extend %box-shadow-border-all;
+  display: flex;
+  flex-direction: column;
+  margin: 0 0.5em 0.5em 0;
+  row-gap: 1em;
+  padding: 0.75em;
+}
+
 .clock {
   &__wrapper {
-    background: white;
     @extend %flex-row-align-center;
     justify-content: center;
-    @extend %box-shadow-border-all;
-    column-gap: 0.5em;
-    margin: 0 0.5em 0.5em 0;
-    padding: 0.75rem;
+    column-gap: 1.5em;
+    // margin: 0 0.5em 0.5em 0;
+    // padding: 0.75rem;
   }
 
   &--close {
@@ -26,6 +34,10 @@ footer {
   &__display {
     @include bv.font--primary(400);
     min-width: fit-content;
-    @extend %flex-row-center-center;
+    @extend %flex-row-align-center;
+
+    &--date {
+      justify-content: flex-end;
+    }
   }
 }
