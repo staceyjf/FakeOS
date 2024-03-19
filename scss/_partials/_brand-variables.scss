@@ -10,14 +10,12 @@ $light-color: #e9ecea;
 @mixin font--primary($weight) {
   font-family: "Press Start 2P", system-ui; //Chicago
   font-weight: $weight;
-  line-height: 1.6;
   letter-spacing: 0.15em;
 }
 
 @mixin font--secondary($weight) {
   font-family: "IBM Plex Sans", sans-serif; //Geneva
   font-weight: $weight;
-  line-height: 1.6;
 }
 
 %macOS-wallpaper {
@@ -27,7 +25,7 @@ $light-color: #e9ecea;
 
 %box-shadow-border-all {
   border: 3px solid black;
-  box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.9);
 }
 
 %rounded-border-top {

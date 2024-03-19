@@ -322,9 +322,9 @@ footer, .desktop {
   background-size: 4px 4px;
 }
 
-.clock {
+.clock__wrapper {
   border: 3px solid black;
-  box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.9);
 }
 
 .menu {
@@ -332,7 +332,7 @@ footer, .desktop {
   border-radius: 10px 10px 0 0;
 }
 
-footer, .menu, .menu__nav {
+footer, .clock__wrapper, .clock__display, .menu, .menu__nav {
   display: flex;
   align-items: center;
 }
@@ -344,7 +344,6 @@ footer, .menu, .menu__nav {
   padding: 1em;
   font-family: "Press Start 2P", system-ui;
   font-weight: 400;
-  line-height: 1.6;
   letter-spacing: 0.15em;
 }
 
@@ -382,18 +381,19 @@ footer {
   justify-content: flex-end;
 }
 
-.clock {
+.clock__wrapper {
   background: white;
+  justify-content: center;
+  column-gap: 0.5em;
+  margin: 0 0.5em 0.5em 0;
+  padding: 0.75rem;
+}
+.clock__display {
   font-family: "Press Start 2P", system-ui;
   font-weight: 400;
-  line-height: 1.6;
   letter-spacing: 0.15em;
-  max-width: fit-content;
-  padding: 0.5rem;
-}
-.clock__wrapper {
-  background-color: black;
-  margin: 0 0.5em 0.5em 0;
+  min-width: fit-content;
+  justify-content: center;
 }
 
 body {
