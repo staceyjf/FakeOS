@@ -317,6 +317,17 @@ template {
   margin: 0;
 }
 
+footer, .clock__wrapper, .menu, .menu__nav {
+  display: flex;
+  align-items: center;
+}
+
+.clock--close, .clock__display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 footer, .desktop {
   background: url(../assets/bg.svg) repeat;
   background-size: 4px 4px;
@@ -330,11 +341,6 @@ footer, .desktop {
 .menu {
   border: 3px solid black;
   border-radius: 10px 10px 0 0;
-}
-
-footer, .clock__wrapper, .clock__display, .menu, .menu__nav {
-  display: flex;
-  align-items: center;
 }
 
 .menu__nav button, .menu__logo {
@@ -393,7 +399,6 @@ footer {
   font-weight: 400;
   letter-spacing: 0.15em;
   min-width: fit-content;
-  justify-content: center;
 }
 
 body {

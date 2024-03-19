@@ -1,0 +1,20 @@
+// getting everything to default
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+%flex-row-align-center {
+  display: flex;
+  align-items: center;
+}
+
+%flex-row-center-center {
+  display: flex;
+  justify-content: center; // aligns main (eg horizontal)
+  align-items: center; // aligns cross (eg vertical)
+}
+// ul {
+//   list-style-type: none;
+// }
