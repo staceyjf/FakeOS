@@ -2,13 +2,11 @@
 @use "../_partials/helpers";
 @use "../_partials/brand-variables" as bv;
 
-footer {
-  @extend %macOS-wallpaper;
-  position: relative;
-}
-
 .clock {
   &__container {
+    position: absolute; // in relation to desktop
+    right: 1em;
+    bottom: 1em;
     display: flex;
     flex-direction: column;
     width: min-content;

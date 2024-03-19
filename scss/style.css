@@ -328,7 +328,7 @@ template {
   align-items: center;
 }
 
-footer, .desktop {
+.desktop {
   background: url(../assets/bg.svg) repeat;
   background-size: 4px 4px;
 }
@@ -381,13 +381,13 @@ header {
   flex-grow: 1;
   overflow-x: hidden;
   position: relative;
-}
-
-footer {
   position: relative;
 }
 
 .clock__container {
+  position: absolute;
+  right: 1em;
+  bottom: 1em;
   display: flex;
   flex-direction: column;
   width: min-content;
