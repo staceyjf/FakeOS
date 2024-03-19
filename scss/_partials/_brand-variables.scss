@@ -25,7 +25,17 @@ $light-color: #e9ecea;
   background-size: 4px 4px;
 }
 
-%flex-align-center {
+%box-shadow-border-all {
+  border: 3px solid black;
+  box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.75);
+}
+
+%rounded-border-top {
+  border: 3px solid black;
+  border-radius: 10px 10px 0 0;
+}
+
+%flex-row-align-center {
   display: flex;
   align-items: center;
 }

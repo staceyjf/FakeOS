@@ -317,12 +317,22 @@ template {
   margin: 0;
 }
 
-.clock, .desktop {
+footer, .desktop {
   background: url(../assets/bg.svg) repeat;
   background-size: 4px 4px;
 }
 
-.clock, .menu, .menu__nav {
+.clock {
+  border: 3px solid black;
+  box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.75);
+}
+
+.menu {
+  border: 3px solid black;
+  border-radius: 10px 10px 0 0;
+}
+
+footer, .menu, .menu__nav {
   display: flex;
   align-items: center;
 }
@@ -336,6 +346,10 @@ template {
   font-weight: 400;
   line-height: 1.6;
   letter-spacing: 0.15em;
+}
+
+header {
+  background-color: black;
 }
 
 .menu {
@@ -364,10 +378,22 @@ template {
   position: relative;
 }
 
-.clock {
-  border: 5px red solid;
+footer {
   justify-content: flex-end;
+}
+
+.clock {
+  background: white;
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.15em;
+  max-width: fit-content;
   padding: 0.5rem;
+}
+.clock__wrapper {
+  background-color: black;
+  margin: 0 0.5em 0.5em 0;
 }
 
 body {

@@ -2,10 +2,21 @@
 @use "../_partials/site-standardization";
 @use "../_partials/brand-variables" as bv;
 
-.clock {
+footer {
   @extend %macOS-wallpaper;
-  border: 5px red solid;
-  @extend %flex-align-center;
+  @extend %flex-row-align-center;
   justify-content: flex-end;
+}
+
+.clock {
+  background: white;
+  @extend %box-shadow-border-all;
+  @include bv.font--primary(400);
+  max-width: fit-content;
   padding: 0.5rem;
+
+  &__wrapper {
+    background-color: black;
+    margin: 0 0.5em 0.5em 0;
+  }
 }

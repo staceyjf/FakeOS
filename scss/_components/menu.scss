@@ -12,12 +12,17 @@
   @include bv.font--primary(400);
 }
 
+header {
+  background-color: black;
+}
+
 .menu {
   background-color: white;
-  @extend %flex-align-center;
+  @extend %flex-row-align-center;
   justify-content: flex-start;
   padding: 0.5rem;
   column-gap: 15px;
+  @extend %rounded-border-top;
 
   // logo
   &__logo {
@@ -27,7 +32,7 @@
 
   // nav
   &__nav {
-    @extend %flex-align-center;
+    @extend %flex-row-align-center;
     justify-content: space-between;
     column-gap: 15px;
 
