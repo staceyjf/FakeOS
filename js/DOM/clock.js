@@ -1,4 +1,11 @@
+import { createElement } from "../logic/utils.js";
+
 export function updateClockEl(calculateTimeDate) {
+  // DOM els
+  const dateParent = document.querySelector("#clockDate");
+  const timeParent = document.querySelector("#clockTime");
+  const clockContainer = document.querySelector("#clockContainer");
+
   // refreshes every 1 sec to give the latest time
   setInterval(() => {
     const timeString = calculateTimeDate();
@@ -13,23 +20,25 @@ export function updateClockEl(calculateTimeDate) {
     // slice to this 21:44:26
     const formattedTimeStr = timeString.slice(12);
 
-    // console.log("time in clock.js: ", timeString);
-    // console.log("formattedTimeStr in clock.js: ", formattedTimeStr);
+    // update
+    timeParent
+      ? (timeParent.innerText = formattedTimeStr)
+      : createElement({
+          elType: "div",
+          text: formattedTimeStr,
+          parent: clockContainer,
+          id: "clockTime",
+          className: "clock__display",
+        });
 
-    //update the relevant DOM els
-    const dateParent = document.querySelector("#clockDate");
-    const timeParent = document.querySelector("#clockTime");
-
-    if (timeParent) {
-      timeParent.innerText = formattedTimeStr;
-    } else {
-      console.log("Element with id 'clockTime' not found");
-    }
-
-    if (dateParent) {
-      dateParent.innerText = formattedDateStr;
-    } else {
-      console.log("Element with id 'clockTime' not found");
-    }
+    dateParent
+      ? (dateParent.innerText = formattedDateStr)
+      : createElement({
+          elType: "div",
+          text: formattedDateStr,
+          parent: clockContainer,
+          id: "clockDate",
+          className: "clock__display",
+        });
   }, 1000);
 }
