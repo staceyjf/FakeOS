@@ -318,7 +318,7 @@ template {
 }
 
 .clock, .desktop {
-  background: url(../../assets/bg.svg) repeat;
+  background: url(../assets/bg.svg) repeat;
   background-size: 4px 4px;
 }
 

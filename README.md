@@ -9,7 +9,7 @@ This web-based application is my take on the old skool macintosh OS design.
 </div>
  
  <br>
-To see the deployed site: coming soon
+To see the deployed site: https://fakeos.staceyfanner.com/
 
 ## About the Web App
 
