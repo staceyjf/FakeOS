@@ -13,7 +13,7 @@
   // logo
   &__logo {
     background-color: pink;
-    @include bv.menuLinkStyle;
+    @include bv.linkStyle;
   }
 
   // nav
@@ -24,7 +24,7 @@
 
     & button {
       background-color: pink;
-      @include bv.menuLinkStyle;
+      @include bv.linkStyle;
       // resetting a default button appearance
       border: 0;
       box-shadow: none;

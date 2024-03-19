@@ -330,9 +330,13 @@ template {
 }
 .menu__logo {
   background-color: pink;
+  color: black;
   text-decoration: none;
   font-size: 16px;
   padding: 1em;
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  line-height: 1.6;
 }
 .menu__nav {
   justify-content: space-between;
@@ -340,9 +344,13 @@ template {
 }
 .menu__nav button {
   background-color: pink;
+  color: black;
   text-decoration: none;
   font-size: 16px;
   padding: 1em;
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  line-height: 1.6;
   border: 0;
   box-shadow: none;
   cursor: pointer;

@@ -6,18 +6,16 @@ $secondary-color: #828282;
 $dark-color: #191919;
 $light-color: #e9ecea;
 
-$font-family-primary: "Press Start 2P";
-$font-family-secondary: "IBM Plex Sans";
-
 // taking the fonts weight as params for easy customisation
-@mixin font-stack(
-  $font-weight-primary: normal,
-  $font-weight-secondary: normal
-) {
-  font-family: $font-family-primary, system-ui;
-  font-weight: $font-weight-primary;
-  font-family: $font-family-secondary, sans-serif;
-  font-weight: $font-weight-secondary;
+@mixin font--primary($weight) {
+  font-family: "Press Start 2P", system-ui; //Chicago
+  font-weight: $weight;
+  line-height: 1.6;
+}
+
+@mixin font--secondary($weight) {
+  font-family: "IBM Plex Sans", sans-serif; //Geneva
+  font-weight: $weight;
   line-height: 1.6;
 }
 
@@ -26,8 +24,11 @@ $font-family-secondary: "IBM Plex Sans";
   align-items: center;
 }
 
-@mixin menuLinkStyle {
+// menu a
+@mixin linkStyle {
+  color: black;
   text-decoration: none;
   font-size: 16px;
   padding: 1em;
+  @include font--primary(400);
 }
