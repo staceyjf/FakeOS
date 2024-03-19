@@ -4,10 +4,8 @@
 @use "../_partials/brand-variables" as bv;
 
 .desktop {
-  background-color: bv.$secondary-color;
   flex-grow: 1; // takes up the remainder vh
   overflow-x: hidden;
-  position: relative;
-  background: url(../../assets/bg.svg) repeat;
-  background-size: 4px 4px;
+  position: relative; //check if i need this
+  @extend %macOS-wallpaper;
 }

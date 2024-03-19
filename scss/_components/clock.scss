@@ -3,8 +3,8 @@
 @use "../_partials/brand-variables" as bv;
 
 .clock {
+  @extend %macOS-wallpaper;
   border: 5px red solid;
-  background-color: bv.$secondary-color;
   @extend %flex-align-center;
   justify-content: flex-end;
   padding: 0.5rem;

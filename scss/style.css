@@ -317,6 +317,11 @@ template {
   margin: 0;
 }
 
+.clock, .desktop {
+  background: url(../../assets/bg.svg) repeat;
+  background-size: 4px 4px;
+}
+
 .clock, .menu, .menu__nav {
   display: flex;
   align-items: center;
@@ -354,17 +359,13 @@ template {
 }
 
 .desktop {
-  background-color: #828282;
   flex-grow: 1;
   overflow-x: hidden;
   position: relative;
-  background: url(../../assets/bg.svg) repeat;
-  background-size: 4px 4px;
 }
 
 .clock {
   border: 5px red solid;
-  background-color: #828282;
   justify-content: flex-end;
   padding: 0.5rem;
 }

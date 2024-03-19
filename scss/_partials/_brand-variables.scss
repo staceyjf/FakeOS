@@ -20,6 +20,11 @@ $light-color: #e9ecea;
   line-height: 1.6;
 }
 
+%macOS-wallpaper {
+  background: url(../../assets/bg.svg) repeat;
+  background-size: 4px 4px;
+}
+
 %flex-align-center {
   display: flex;
   align-items: center;
