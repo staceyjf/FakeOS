@@ -4,24 +4,23 @@
 
 footer {
   @extend %macOS-wallpaper;
-  @extend %flex-row-align-center;
-  justify-content: flex-end;
+  position: relative;
 }
 
 .clock {
   &__container {
-    background: white;
-    @extend %box-shadow-border-all;
-    @extend %flex-row-center-center;
-    margin: 0 0.5em 0.5em 0;
-    column-gap: 1.5em;
-    padding: 0.75em;
+    display: flex;
+    flex-direction: column;
+    width: min-content;
   }
 
   &__wrapper {
-    display: flex;
-    flex-direction: column;
-    row-gap: 1em;
+    background: white;
+    @extend %box-shadow-border-all;
+    @extend %flex-row-center-center;
+    // margin: 0 0.5em 0.5em 0;
+    column-gap: 1.5em;
+    padding: 0.75em;
   }
 
   &--close {
@@ -31,6 +30,6 @@ footer {
   &__display {
     @include bv.font--primary(400);
     min-width: fit-content;
-    @extend %flex-row-align-center;
+    align-self: center;
   }
 }
