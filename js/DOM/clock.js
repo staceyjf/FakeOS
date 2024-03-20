@@ -1,11 +1,11 @@
 import { createElement } from "./utils.js";
 
-export function updateClockEl(calculateTimeDate) {
-  // DOM els
-  const dateParent = document.querySelector("#clockDate");
-  const timeParent = document.querySelector("#clockTime");
-  const clockContainer = document.querySelector("#clockContainer");
-
+export function updateClockEl(
+  calculateTimeDate,
+  clockDate,
+  clockTime,
+  clockContainer
+) {
   // refreshes every 1 sec to give the latest time
   setInterval(() => {
     const timeString = calculateTimeDate();
@@ -21,8 +21,8 @@ export function updateClockEl(calculateTimeDate) {
     const formattedTimeStr = timeString.slice(12);
 
     // update
-    timeParent
-      ? (timeParent.innerText = formattedTimeStr)
+    clockTime
+      ? (clockTime.innerText = formattedTimeStr)
       : createElement({
           elType: "div",
           text: formattedTimeStr,
@@ -31,8 +31,8 @@ export function updateClockEl(calculateTimeDate) {
           className: "clock__display",
         });
 
-    dateParent
-      ? (dateParent.innerText = formattedDateStr)
+    clockDate
+      ? (clockDate.innerText = formattedDateStr)
       : createElement({
           elType: "div",
           text: formattedDateStr,
