@@ -11,41 +11,98 @@
   </head>
   <body>
     <header>
-      <div class="menu">
-        <!-- TO DO: source logo -->
-        <a href="" class="menu__logo">Logo</a>
-        <nav class="menu__nav">
-          <!-- TO DO: add eventlistern for sub-menu -->
+      <nav class="menu">
+        <div class="menu__subnav">
+          <!-- logo -->
+          <button class="btn btn__menu">
+            <img src="./assets/logo/State=off.svg" alt="apple logo" />
+          </button>
+          <div class="menu__subnav-content">
+            <a href="">About the Finder...</a>
+            <a href="">Alarm Clock</a>
+            <a href="">Calculator</a>
+            <a href="">Chooser</a>
+            <a href="">Control Panel</a>
+            <a href="">Key Panel</a>
+            <a href="">Key Caps</a>
+            <a href="">Note Pad</a>
+            <a href="">Puzzle</a>
+            <a href="">Scrapbook</a>
+          </div>
+        </div>
+
+        <div class="menu__subnav">
+          <!-- File -->
           <button class="btn btn__menu">File</button>
+          <div class="menu__subnav-content">
+            <a href="">New Folder &#x2318;N</a>
+            <a href="">Open &#x2318;O</a>
+            <a href="">Print</a>
+            <a href="">Close &#x2318;W</a>
+            <a href="">Get Info &#x2318;I</a>
+            <a href="">Duplicate &#x2318;D</a>
+            <a href="">Page Setup...</a>
+            <a href="">Print Directory...</a>
+            <a href="">Eject &#x2318;E</a>
+          </div>
+        </div>
+
+        <div class="menu__subnav">
+          <!-- Edit -->
           <button class="btn btn__menu">Edit</button>
+          <div class="menu__subnav-content">
+            <a href="">Undo &#x2318;Z</a>
+            <a href="">Cut &#x2318;K</a>
+            <a href="">Print</a>
+            <a href="">Copy &#x2318;C</a>
+            <a href="">Paste &#x2318;V</a>
+            <a href="">Clear</a>
+            <a href="">Select All &#x2318;A</a>
+            <a href="">Show Clipboard</a>
+          </div>
+        </div>
+
+        <div class="menu__subnav">
+          <!-- View -->
           <button class="btn btn__menu">View</button>
+          <div class="menu__subnav-content">
+            <a href="#company">Company</a>
+            <a href="#team">Team</a>
+            <a href="#careers">Careers</a>
+          </div>
+        </div>
+
+        <div class="menu__subnav">
+          <!-- Special -->
           <button class="btn btn__menu">Special</button>
-        </nav>
-        <!-- TO DO - click sub menu appears under each li -->
-      </div>
+          <div class="menu__subnav-content">
+            <a href="#company">Company</a>
+            <a href="#team">Team</a>
+            <a href="#careers">Careers</a>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <main class="desktop">
       <div class="clock__container">
         <div class="clock__wrapper">
-          <!-- TO DO: amend this so it closes the clock -->
+          <!-- TO DO: amend this so it closes the time -->
           <img
             class="clock--close"
             src="./assets/controls/Close.svg"
             alt="Close icon"
           />
-          <!-- TO DO: dynically update the clock based on users time -->
           <div class="clock__display" id="clockTime">00.00.00</div>
         </div>
 
         <div class="clock__wrapper" id="clockContainer">
-          <!-- TO DO: amend this so it closes the clock -->
+          <!-- TO DO: amend this so it closes the date -->
           <img
             class="clock--close"
             src="./assets/controls/Close.svg"
             alt="Close icon"
           />
-          <!-- TO DO: dynically update the clock based on users time -->
           <div class="clock__display" id="clockDate">20:12:83</div>
         </div>
       </div>

@@ -10,12 +10,12 @@
 
 ### "Clearly Realizable Units that are Meaningful Building Blocks."
 
-1. basic structure / html / css / js
-2. find icons
+1. basic structure / html / css / js (done!!!!!)
+2. find icons (done!!!)
 3. research position css property, specifically _fixed_ and _absolute_
 4. single page application with sections for each element
-5. split logic js and my js DOM modules
-6. displaying time
+5. split logic js and my js DOM modules (done!!!!!!)
+6. displaying time (done!!!!!)
 7. selectable menu
 8. selectable icons
 9. app 1
