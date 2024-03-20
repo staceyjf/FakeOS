@@ -48,6 +48,9 @@ header {
         white-space: nowrap; // display the content on one line
         padding: 10px 16px;
         @include bv.font--primary(400);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
       }
     }
 
