@@ -88,6 +88,25 @@
       </nav>
     </header>
 
+    <!-- 
+  open and closing models
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Some content in the modal..</p>
+  </div>
+
+  // specially for the clock and date
+var modal = document.getElementById("myModal"); // Replace with your modal's id
+var closeIcon = document.querySelector(".clock--close");
+
+closeIcon.onclick = function() {
+  modal.style.display = "none";
+}
+</div> -->
+
+    <button id="myBtn">Open Modal</button>
+
     <main class="desktop">
       <div class="clock__container">
         <div class="clock__wrapper">

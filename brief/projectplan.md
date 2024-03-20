@@ -60,6 +60,9 @@
     - selecting an icon will open an "app", creating a _modal_ to display some content
     - Apps should be able to contain text, an image or a form
 
+What is a modal -
+A modal is a type of dialog box or popup that appears in the same window of a website or application, usually to request user interaction. It is called a "modal" because it creates a mode that disables the main window but keeps it visible in the background. The user must interact with the modal (e.g., close it or fill out a form) before they can return to the main window. Modals are commonly used for things like login forms, notifications, and additional information prompts.
+
 ### No 1 - app
 
 ### No 2 - app

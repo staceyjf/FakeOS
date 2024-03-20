@@ -1,4 +1,4 @@
-import { createElement } from "../logic/utils.js";
+import { createElement } from "./utils.js";
 
 export function updateClockEl(calculateTimeDate) {
   // DOM els
