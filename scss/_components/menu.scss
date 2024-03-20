@@ -15,6 +15,7 @@ header {
 
 .menu {
   display: flex;
+  align-items: center;
   background-color: white;
   @extend %rounded-border-top;
 
@@ -45,18 +46,19 @@ header {
   }
 
   &__btn {
-    font-size: 16px;
     border: none;
     outline: none;
     color: bv.$primary-color;
+    height: 50px;
+    flex: 1;
     padding: 14px 16px;
+    margin: 0;
     background-color: inherit;
     @include bv.font--primary(400);
-    margin: 0;
   }
 
   &__btn:hover,
   &__sub-content a:hover {
-    background-color: red;
+    background-color: bv.$secondary-color;
   }
 }

@@ -344,6 +344,7 @@ header {
 
 .menu {
   display: flex;
+  align-items: center;
   background-color: white;
 }
 .menu__sub {
@@ -369,19 +370,20 @@ header {
   display: block;
 }
 .menu__btn {
-  font-size: 16px;
   border: none;
   outline: none;
   color: black;
+  height: 50px;
+  flex: 1;
   padding: 14px 16px;
+  margin: 0;
   background-color: inherit;
   font-family: "Press Start 2P", system-ui;
   font-weight: 400;
   letter-spacing: 0.15em;
-  margin: 0;
 }
 .menu__btn:hover, .menu__sub-content a:hover {
-  background-color: red;
+  background-color: #828282;
 }
 
 .desktop {
