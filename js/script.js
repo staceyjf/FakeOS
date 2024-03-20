@@ -3,11 +3,14 @@ console.log("hi script is working");
 // LOGIC
 import calculateTimeDate from "./logic/time.js";
 import { updateClockEl } from "./DOM/clock.js";
+import openModal from "./DOM/openModal.js";
 
 // NODES
 // icons
+// creates a NODE list which is a snapshot in time (don't need to dynamically update so fine to use)
 const allIcons = document.querySelectorAll(".icon");
 const printer = document.querySelector("#printerBtn");
+const other = document.querySelector("#otherBtn");
 
 // clock
 const clockDate = document.querySelector("#clockDate");
@@ -17,3 +20,6 @@ const clockContainer = document.querySelector("#clockContainer");
 // initialise clock
 // pass my time function to updateClockEl
 updateClockEl(calculateTimeDate, clockDate, clockTime, clockContainer);
+
+// trigger the modals to open when clicked
+openModal(allIcons);
