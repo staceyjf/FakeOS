@@ -390,10 +390,14 @@ template {
   top: 5em;
   left: 15em;
   background-color: white;
-  max-width: 40em;
+  max-width: 50em;
+  height: 25em;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   row-gap: 0.5em;
+  padding: 0.1em;
   margin-bottom: 1em;
   background-color: black;
 }
@@ -470,6 +474,7 @@ header {
 
 .chuck__container {
   background-color: white;
+  flex: 1;
 }
 .chuck__header {
   font-family: "Press Start 2P", system-ui;

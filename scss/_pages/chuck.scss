@@ -5,6 +5,7 @@
   &__container {
     @extend %rounded-border-top;
     background-color: white;
+    flex: 1;
   }
 
   &__header {
