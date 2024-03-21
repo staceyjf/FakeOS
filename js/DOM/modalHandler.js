@@ -3,16 +3,19 @@ import addJokes from "../logic/fetchJokes.js";
 const modalCloseBtns = document.querySelectorAll(".modal--close");
 console.log("this are my close btns", modalCloseBtns);
 
+// a new scope if fired for each click even
 export function openModal({ icons, jokeParagraph, category }) {
   icons.forEach((icon) => {
     icon.addEventListener("click", () => {
+      const modalId = icon.dataset.modalId; // get the modal id from the data-modal attribute
+      const modalEl = document.getElementById(modalId); // select the modal
       switch (icon.id) {
-        case "printerBtn":
+        case "printerBtn--open":
           console.log("printer is working");
           window.print(); // opens the window's print method
           break;
-        case "chuckBtn":
-          displayModal();
+        case "chuckBtn--open":
+          displayModal(modalEl);
           console.log("Chuck has been opened", icon);
           addJokes(jokeParagraph, category);
           break;
@@ -24,19 +27,19 @@ export function openModal({ icons, jokeParagraph, category }) {
 }
 
 // TO DO refactor into one reusable function
-
 export function closeModal({ modals }) {
-  // add an event listener to all modals
-  modalCloseBtns.forEach((modalCloseBtn) => {
+  modals.forEach((modalCloseBtn) => {
     modalCloseBtn.addEventListener("click", () => {
+      const modalId = modalCloseBtn.dataset.modalId;
+      const modalEl = document.getElementById(modalId);
       switch (modalCloseBtn.id) {
         case "printerBtn":
           console.log(
             "printer doesn't need a case but will keep for refactoring into one function"
           );
           break;
-        case "chuckCloseBtn":
-          hidModal(modalCloseBtn);
+        case "chuckBtn--close":
+          hidModal(modalEl);
           console.log("Chuck has closed", modalCloseBtn);
           break;
         default:
@@ -54,8 +57,4 @@ function displayModal(modalEl) {
 // close
 function hidModal(modalEl) {
   modalEl.classList.remove("show");
-}
-
-function findModal(btnId) {
-  return document.getElementById(id);
 }

@@ -3,6 +3,7 @@
 
 .modal {
   // TO DO INVESTIGATE DRAG AND DROP if time
+  display: none;
   position: absolute;
   top: 5em;
   left: 15em;
@@ -22,4 +23,8 @@
       left: 0.25em;
     }
   }
+}
+
+.show {
+  display: block;
 }

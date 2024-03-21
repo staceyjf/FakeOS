@@ -386,6 +386,7 @@ template {
 }
 
 .modal {
+  display: none;
   position: absolute;
   top: 5em;
   left: 15em;
@@ -403,6 +404,10 @@ template {
   position: relative;
   top: 0.25em;
   left: 0.25em;
+}
+
+.show {
+  display: block;
 }
 
 header {
