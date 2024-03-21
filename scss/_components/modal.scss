@@ -2,11 +2,15 @@
 @use "../_partials/brand-variables" as bv;
 
 .modal {
-  position: relative;
+  // TO DO INVESTIGATE DRAG AND DROP if time
+  position: absolute;
+  top: 5em;
+  left: 15em;
   background-color: white;
-  max-width: 35em;
+  max-width: 40em;
   display: flex;
   flex-direction: column;
   row-gap: 0.5em;
   margin-bottom: 1em;
+  background-color: black;
 }

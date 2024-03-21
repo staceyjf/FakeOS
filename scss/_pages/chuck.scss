@@ -2,8 +2,14 @@
 @use "../_partials/brand-variables" as bv;
 
 .chuck {
+  &__container {
+    @extend %rounded-border-top;
+    background-color: white;
+  }
+
   &__header {
     @include bv.font--primary(400);
+    padding: 1em;
   }
   &__text {
     @include bv.font--secondary(400);

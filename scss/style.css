@@ -333,7 +333,7 @@ template {
   box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.9);
 }
 
-.menu {
+.chuck__container, .menu {
   border: 3px solid black;
   border-radius: 10px 10px 0 0;
 }
@@ -365,13 +365,11 @@ template {
   background-color: transparent;
   border: none;
 }
-.icon__computer, .icon__floppy, .icon__printer {
+.icon__computer, .icon__floppy, .icon__printer, .icon__trash {
   width: 90px;
   height: 105px;
 }
 .icon__trash {
-  width: 70px;
-  height: 105px;
   margin-left: auto;
 }
 .icon p {
@@ -382,19 +380,22 @@ template {
   font-weight: 0;
   letter-spacing: 0.15em;
 }
-.icon__computer img, .icon__floppy img, .icon__printer img, .icontrash img {
+.icon__computer img, .icon__floppy img, .icon__printer img, .icon__trash img {
   height: 100%;
   width: 100%;
 }
 
 .modal {
-  position: relative;
+  position: absolute;
+  top: 5em;
+  left: 15em;
   background-color: white;
-  max-width: 35em;
+  max-width: 40em;
   display: flex;
   flex-direction: column;
   row-gap: 0.5em;
   margin-bottom: 1em;
+  background-color: black;
 }
 
 header {
@@ -467,10 +468,14 @@ header {
   position: relative;
 }
 
+.chuck__container {
+  background-color: white;
+}
 .chuck__header {
   font-family: "Press Start 2P", system-ui;
   font-weight: 400;
   letter-spacing: 0.15em;
+  padding: 1em;
 }
 .chuck__text {
   font-family: "IBM Plex Sans", sans-serif;

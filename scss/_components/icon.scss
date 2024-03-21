@@ -21,14 +21,13 @@
   // control the size of the img
   &__computer,
   &__floppy,
-  &__printer {
+  &__printer,
+  &__trash {
     width: 90px;
     height: 105px;
   }
 
   &__trash {
-    width: 70px;
-    height: 105px;
     margin-left: auto; // push this to the right side
   }
 
@@ -42,7 +41,7 @@
   &__computer,
   &__floppy,
   &__printer,
-  &trash {
+  &__trash {
     & img {
       height: 100%;
       width: 100%;
