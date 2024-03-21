@@ -10,10 +10,20 @@
 
   &__header {
     @include bv.font--primary(400);
-    padding: 1em;
+    padding: 2em;
   }
+
+  &__category {
+    @include bv.font--secondary(400);
+  }
+
   &__text {
     @include bv.font--secondary(400);
-    padding: 1em;
+    padding: 2em;
   }
+}
+
+// to avoid having another class
+label.chuck__category {
+  padding: 1em;
 }

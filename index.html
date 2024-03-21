@@ -139,7 +139,16 @@ closeIcon.onclick = function() {
       <div class="modal" id="chuck">
         <div class="chuck__container">
           <h3 class="chuck__header">Ask Chuck to tell you a Joke</h3>
-          <input type="text" class="chuck--catergory" />
+          <label class="chuck__category" for="chuckCategory">Select a Category</label>
+          <select class="chuck__category" id="chuckCategory">
+            <option value="" disabled selected>
+              Select a category</option>
+            </option>
+            <option value="+">x</option>
+            <option value="-">y</option>
+            <option value="*">z</option>
+            <option value="/">s</option>
+          </select>
           <p class="chuck__text">hold for joke</p>
         </div>
       </div>
