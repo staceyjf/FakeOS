@@ -12,11 +12,11 @@
 
 1. basic structure / html / css / js (done!!!!!)
 2. find icons (done!!!)
-3. research position css property, specifically _fixed_ and _absolute_
-4. single page application with sections for each element
+3. research position css property, specifically _fixed_ and _absolute_ (done!!!!!)
+4. single page application with sections for each element (done!!!!!)
 5. split logic js and my js DOM modules (done!!!!!!)
 6. displaying time (done!!!!!)
-7. selectable menu
+7. selectable menu (done!!!!!)
 8. selectable icons
 9. app 1
 10. app 2

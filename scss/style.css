@@ -338,6 +338,16 @@ template {
   border-radius: 10px 10px 0 0;
 }
 
+.desktop {
+  border: 3px solid black;
+  border-radius: 0 0 10px 10px;
+}
+
+.desktop {
+  border-right: 3px solid black;
+  border-left: 3px solid black;
+}
+
 header {
   background-color: black;
 }
@@ -405,7 +415,6 @@ header {
 .desktop {
   flex-grow: 1;
   overflow-x: hidden;
-  position: relative;
   position: relative;
 }
 

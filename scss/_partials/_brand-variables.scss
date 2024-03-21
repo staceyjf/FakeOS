@@ -32,3 +32,13 @@ $light-color: #e9ecea;
   border: 3px solid black;
   border-radius: 10px 10px 0 0;
 }
+
+%rounded-border-bottom {
+  border: 3px solid black;
+  border-radius: 0 0 10px 10px;
+}
+
+%border-sides {
+  border-right: 3px solid black;
+  border-left: 3px solid black;
+}
