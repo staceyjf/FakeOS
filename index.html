@@ -148,19 +148,22 @@ closeIcon.onclick = function() {
         <div class="chuck__container">
           <h3 class="chuck__header">Ask Chuck to tell you a Joke</h3>
 
-          <div class="chuck__category--container">
-            <label class="chuck__category" for="chuckCategory"
-              >Select a Category</label
-            >
-            <select class="chuck__category" id="chuckCategory">
-              <option value="" disabled selected>Select a category</option>
-              <option value="+">x</option>
-              <option value="-">y</option>
-              <option value="*">z</option>
-              <option value="/">s</option>
-            </select>
-          </div>
-          <p class="chuck__text">hold for joke</p>
+          <form id="chuckForm">
+            <div class="chuck__category--container">
+              <label class="chuck__category" for="chuckCategory"
+                >Select a Category</label
+              >
+              <select class="chuck__category" id="chuckCategory" required>
+                <option value="" disabled selected>Select a category</option>
+                <option value="x">x</option>
+                <option value="y">y</option>
+                <option value="z">z</option>
+                <option value="s">s</option>
+              </select>
+            </div>
+            <button id="ChuckJokeBtn">Get Joke</button>
+          </form>
+          <p class="chuck__text" id="chuckText">hold for joke</p>
         </div>
       </div>
 

@@ -1,6 +1,7 @@
 console.log("hi script is working");
 
 // LOGIC
+import addJokes from "./logic/fetchJokes.js";
 import calculateTimeDate from "./logic/fetchTime.js";
 import { updateClockEl } from "./DOM/clock.js";
 import { openModal, closeModal } from "./DOM/modalHandler.js";
@@ -23,3 +24,11 @@ updateClockEl(calculateTimeDate, clockDate, clockTime, clockContainer);
 
 // trigger the modals to open when clicked
 openModal(allIcons);
+
+document.getElementById("chuckForm").addEventListener("submit", (event) => {
+  event.preventDefault();
+  const jokeText = document.getElementById("chuckText");
+  const selectedOption = document.getElementById("chuckCategory").value;
+
+  console.log(selectedOption);
+});
