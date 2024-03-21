@@ -348,6 +348,55 @@ template {
   border-left: 3px solid black;
 }
 
+.icon-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 210px;
+  column-gap: 0.5em;
+  row-gap: 2em;
+  justify-content: space-between;
+  position: absolute;
+  top: 7em;
+  right: 2em;
+}
+
+.icon {
+  z-index: 1;
+  background-color: transparent;
+  border: none;
+}
+.icon__computer, .icon__floppy, .icon__printer {
+  width: 90px;
+  height: 105px;
+}
+.icon__trash {
+  width: 70px;
+  height: 105px;
+  margin-left: auto;
+}
+.icon p {
+  margin: 0;
+  padding: 5px 3px;
+  background-color: white;
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 0;
+  letter-spacing: 0.15em;
+}
+.icon__computer img, .icon__floppy img, .icon__printer img, .icontrash img {
+  height: 100%;
+  width: 100%;
+}
+
+.modal {
+  position: relative;
+  background-color: white;
+  max-width: 35em;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5em;
+  margin-bottom: 1em;
+}
+
 header {
   background-color: black;
 }
@@ -418,43 +467,15 @@ header {
   position: relative;
 }
 
-.icon-container {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 210px;
-  column-gap: 0.5em;
-  row-gap: 2em;
-  justify-content: space-between;
-  position: absolute;
-  top: 7em;
-  right: 2em;
-}
-
-.icon {
-  z-index: 1;
-  background-color: transparent;
-  border: none;
-}
-.icon__computer, .icon__floppy, .icon__printer {
-  width: 90px;
-  height: 105px;
-}
-.icon__trash {
-  width: 70px;
-  height: 105px;
-  margin-left: auto;
-}
-.icon p {
-  margin: 0;
-  padding: 5px 3px;
-  background-color: white;
+.chuck__header {
   font-family: "Press Start 2P", system-ui;
-  font-weight: 0;
+  font-weight: 400;
   letter-spacing: 0.15em;
 }
-.icon__computer img, .icon__floppy img, .icon__printer img, .icontrash img {
-  height: 100%;
-  width: 100%;
+.chuck__text {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  padding: 1em;
 }
 
 .clock__container {

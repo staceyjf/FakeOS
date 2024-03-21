@@ -1,0 +1,12 @@
+// partials
+@use "../_partials/brand-variables" as bv;
+
+.chuck {
+  &__header {
+    @include bv.font--primary(400);
+  }
+  &__text {
+    @include bv.font--secondary(400);
+    padding: 1em;
+  }
+}

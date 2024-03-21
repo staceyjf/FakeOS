@@ -1,0 +1,12 @@
+// partials
+@use "../_partials/brand-variables" as bv;
+
+.modal {
+  position: relative;
+  background-color: white;
+  max-width: 35em;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5em;
+  margin-bottom: 1em;
+}
