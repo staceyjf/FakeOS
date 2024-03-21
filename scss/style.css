@@ -342,7 +342,7 @@ template {
   border-radius: 0 0 10px 10px;
 }
 
-.desktop {
+.desktop, .modal__frame {
   border-right: 3px solid black;
   border-left: 3px solid black;
 }
@@ -418,6 +418,7 @@ template {
 .modal__frame {
   height: 25px;
   background-color: white;
+  border-top: 3px solid black;
 }
 .modal__frame img {
   position: relative;

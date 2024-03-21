@@ -1,6 +1,6 @@
 // partials
 @use "../_partials/brand-variables" as bv;
-@use "./btn.scss";
+@use "./btn.scss"; // btn component
 
 .modal {
   // TO DO INVESTIGATE DRAG AND DROP if time
@@ -17,6 +17,8 @@
   &__frame {
     height: 25px;
     background-color: white;
+    @extend %border-sides;
+    border-top: 3px solid black;
 
     & img {
       position: relative;
