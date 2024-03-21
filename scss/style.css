@@ -439,16 +439,20 @@ header {
   width: 90px;
   height: 105px;
 }
-.icon__other {
-  width: 70px;
-  height: 105px;
-}
 .icon__trash {
   width: 70px;
   height: 105px;
   margin-left: auto;
 }
-.icon img {
+.icon p {
+  margin: 0;
+  padding: 5px 3px;
+  background-color: white;
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 0;
+  letter-spacing: 0.15em;
+}
+.icon__computer img, .icon__floppy img, .icon__printer img, .icontrash img {
   height: 100%;
   width: 100%;
 }

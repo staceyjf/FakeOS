@@ -1,9 +1,9 @@
 console.log("hi script is working");
 
 // LOGIC
-import calculateTimeDate from "./logic/time.js";
+import calculateTimeDate from "./logic/fetchTime.js";
 import { updateClockEl } from "./DOM/clock.js";
-import openModal from "./DOM/openModal.js";
+import { openModal, closeModal } from "./DOM/modalHandler.js";
 
 // NODES
 // icons

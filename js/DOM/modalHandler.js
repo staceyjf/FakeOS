@@ -1,4 +1,4 @@
-export default function openModal(allIcons) {
+export function openModal(allIcons) {
   // add an event listener to all relevant icons
   allIcons.forEach((icon) => {
     icon.addEventListener("click", () => {
@@ -16,3 +16,7 @@ export default function openModal(allIcons) {
     });
   });
 }
+
+export function createModal(icon) {}
+
+export function closeModal(icon) {}
