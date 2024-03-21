@@ -16,7 +16,7 @@
 
   &__frame {
     position: relative;
-    height: 25px;
+    max-height: 50px;
     width: 100%;
     background-color: white;
     @extend %border-sides;
@@ -27,6 +27,7 @@
     & h4 {
       flex: 1;
       @include bv.font--secondary(400);
+      text-transform: uppercase;
       padding: 0.5em;
       text-align: center;
     }
