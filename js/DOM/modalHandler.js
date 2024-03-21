@@ -18,7 +18,7 @@ export function openModal({ icons, jokeParagraph, category }) {
             console.log(joke);
             jokeParagraph.innerText = joke;
             console.log("Chuck has been opened", icon);
-            displayModal(modalEl); // display the modal after the joke is updated
+            displayModal(modalEl); // display modal once joke has been updated
           } catch (e) {
             console.error("Error fetching joke:", e);
           }

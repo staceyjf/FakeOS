@@ -1,24 +1,20 @@
 console.log("hi script is working");
-
 // LOGIC
-import fetchJokes from "./logic/fetchJokes.js";
 import calculateTimeDate from "./logic/fetchTime.js";
+import handleJokeSubmit from "./DOM/chuck.js";
 import { updateClockEl } from "./DOM/clock.js";
 import { openModal, closeModal } from "./DOM/modalHandler.js";
 
-// NODES
 // icons
 // creates a NODE list which is a snapshot in time (don't need to dynamically update so fine to use)
 const allIcons = document.querySelectorAll(".icon");
 const modalCloseBtns = document.querySelectorAll(".modal--close");
 
-const allModals = document.querySelectorAll(".modal");
-
-const printer = document.querySelector("#printerBtn");
-const other = document.querySelector("#otherBtn");
 const categories = document.getElementById("chuckCategory");
 const category = categories.value;
 const jokeParagraph = document.getElementById("chuckText");
+
+// NODES
 
 // clock
 const clockDate = document.querySelector("#clockDate");
@@ -42,9 +38,7 @@ closeModal({
   modals: modalCloseBtns,
 });
 
-document.getElementById("chuckForm").addEventListener("submit", (event) => {
-  event.preventDefault();
-  fetchJokes(jokeParagraph, category);
-});
+// handle eventlistner for chuck form
+handleJokeSubmit(jokeParagraph, category);
 
 initialize(); // start the app with the relevant actios
