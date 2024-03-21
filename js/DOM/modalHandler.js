@@ -28,10 +28,11 @@ export function openModal({ icons, jokeParagraph, category }) {
 
 // TO DO refactor into one reusable function
 export function closeModal({ modals }) {
-  modals.forEach((modalCloseBtn) => {
+  modalCloseBtns.forEach((modalCloseBtn) => {
     modalCloseBtn.addEventListener("click", () => {
       const modalId = modalCloseBtn.dataset.modalId;
       const modalEl = document.getElementById(modalId);
+      console.log("this is modaEl", modalEl);
       switch (modalCloseBtn.id) {
         case "printerBtn":
           console.log(
