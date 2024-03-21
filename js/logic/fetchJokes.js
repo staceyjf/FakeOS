@@ -1,13 +1,12 @@
-export default async function addJokes(category, jokeParagraph) {
+export default async function addJokes(jokeParagraph, category = null) {
   let url = "https://api.chucknorris.io/jokes/random";
-  // if there is a user choice for input
-  console.log(category);
 
+  // making catergory optional by giving it a default value of null
   if (category) {
-    url += `?category=${category}`; //endpoint
+    url += `?category=${category}`; //endpoint with user choice of catergory
   }
 
   const response = await fetch(url);
   const data = await response.json();
-  let joke = data.value;
+  jokeParagraph.innerText = data.value;
 }

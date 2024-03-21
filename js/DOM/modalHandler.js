@@ -1,6 +1,8 @@
-export function openModal(allIcons) {
+import addJokes from "../logic/fetchJokes.js";
+
+export function openModal({ icons, jokeParagraph, category }) {
   // add an event listener to all relevant icons
-  allIcons.forEach((icon) => {
+  icons.forEach((icon) => {
     icon.addEventListener("click", () => {
       switch (icon.id) {
         case "printerBtn":
@@ -10,6 +12,7 @@ export function openModal(allIcons) {
         case "chuckBtn":
           displayModal(icon.id);
           console.log("Chuck has been opened");
+          addJokes(jokeParagraph, category);
           break;
         default:
           alert("This icon is just for show");

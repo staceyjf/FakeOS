@@ -12,25 +12,29 @@ import { openModal, closeModal } from "./DOM/modalHandler.js";
 const allIcons = document.querySelectorAll(".icon");
 const printer = document.querySelector("#printerBtn");
 const other = document.querySelector("#otherBtn");
+const categories = document.getElementById("chuckCategory");
+const category = categories.value;
+const jokeParagraph = document.getElementById("chuckText");
 
 // clock
 const clockDate = document.querySelector("#clockDate");
 const clockTime = document.querySelector("#clockTime");
 const clockContainer = document.querySelector("#clockContainer");
 
-// initialise clock
-// pass my time function to updateClockEl
-updateClockEl(calculateTimeDate, clockDate, clockTime, clockContainer);
+function initialize() {
+  // initialise clock
+  // pass my time function to updateClockEl
+  updateClockEl(calculateTimeDate, clockDate, clockTime, clockContainer);
+}
 
 // trigger the modals to open when clicked
-openModal(allIcons);
+openModal({
+  icons: allIcons,
+  jokeParagraph: jokeParagraph,
+  category: category,
+});
 
 document.getElementById("chuckForm").addEventListener("submit", (event) => {
   event.preventDefault();
-  const categories = document.getElementById("chuckCategory");
-  const category = categories.value;
-  const jokeParagraph = document.getElementById("chuckText");
-
-  console.log(category);
-  addJokes(category, jokeParagraph);
+  addJokes(jokeParagraph, category);
 });
