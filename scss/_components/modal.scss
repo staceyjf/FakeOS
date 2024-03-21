@@ -1,5 +1,6 @@
 // partials
 @use "../_partials/brand-variables" as bv;
+@use "./btn.scss";
 
 .modal {
   // TO DO INVESTIGATE DRAG AND DROP if time
@@ -9,7 +10,7 @@
   left: 15em;
   background-color: white;
   max-width: 50em;
-  height: 30em;
+  max-height: 30em;
   background-color: black;
   z-index: 2;
 
@@ -22,6 +23,10 @@
       top: 0.25em;
       left: 0.25em;
     }
+  }
+
+  &__btn {
+    @extend %btn;
   }
 }
 
