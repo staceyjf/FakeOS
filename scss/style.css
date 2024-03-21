@@ -391,15 +391,18 @@ template {
   left: 15em;
   background-color: white;
   max-width: 50em;
-  height: 25em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  row-gap: 0.5em;
-  padding: 0.1em;
-  margin-bottom: 1em;
+  height: 30em;
   background-color: black;
+  z-index: 2;
+}
+.modal__frame {
+  height: 25px;
+  background-color: white;
+}
+.modal__frame img {
+  position: relative;
+  top: 0.25em;
+  left: 0.25em;
 }
 
 header {
@@ -468,32 +471,51 @@ header {
 
 .desktop {
   flex-grow: 1;
-  overflow-x: hidden;
   position: relative;
 }
 
 .chuck__container {
   background-color: white;
-  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  row-gap: 0.5em;
 }
 .chuck__header {
   font-family: "Press Start 2P", system-ui;
   font-weight: 400;
   letter-spacing: 0.15em;
-  padding: 2em;
+  padding: 1em;
+  border: 1px solid red;
 }
 .chuck__category {
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 400;
+  padding: 0.25em;
+}
+.chuck__category--container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  column-gap: 0.5em;
+  width: 100%;
+  border: 1px solid red;
 }
 .chuck__text {
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 400;
-  padding: 2em;
+  flex: 1;
+  width: 100%;
+  padding: 1em;
+  text-align: center;
+  border: 1px solid red;
 }
 
 label.chuck__category {
-  padding: 1em;
+  color: #333;
 }
 
 .clock__container {

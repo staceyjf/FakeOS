@@ -5,25 +5,46 @@
   &__container {
     @extend %rounded-border-top;
     background-color: white;
-    flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    row-gap: 0.5em;
   }
 
   &__header {
     @include bv.font--primary(400);
-    padding: 2em;
+    padding: 1em;
+    border: 1px solid red;
   }
 
   &__category {
     @include bv.font--secondary(400);
+    padding: 0.25em;
+
+    &--container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1em;
+      column-gap: 0.5em;
+      width: 100%;
+      border: 1px solid red;
+    }
   }
 
   &__text {
     @include bv.font--secondary(400);
-    padding: 2em;
+    flex: 1;
+    width: 100%;
+    padding: 1em;
+    text-align: center;
+    border: 1px solid red;
   }
 }
 
 // to avoid having another class
 label.chuck__category {
-  padding: 1em;
+  color: bv.$dark-color;
 }

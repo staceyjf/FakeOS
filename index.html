@@ -137,18 +137,29 @@ closeIcon.onclick = function() {
 
       <!-- modals -->
       <div class="modal" id="chuck">
+        <div class="modal__frame">
+          <img
+            class="modal--close"
+            src="./assets/controls/Close.svg"
+            alt="Close icon"
+          />
+        </div>
+        <h6></h6>
         <div class="chuck__container">
           <h3 class="chuck__header">Ask Chuck to tell you a Joke</h3>
-          <label class="chuck__category" for="chuckCategory">Select a Category</label>
-          <select class="chuck__category" id="chuckCategory">
-            <option value="" disabled selected>
-              Select a category</option>
-            </option>
-            <option value="+">x</option>
-            <option value="-">y</option>
-            <option value="*">z</option>
-            <option value="/">s</option>
-          </select>
+
+          <div class="chuck__category--container">
+            <label class="chuck__category" for="chuckCategory"
+              >Select a Category</label
+            >
+            <select class="chuck__category" id="chuckCategory">
+              <option value="" disabled selected>Select a category</option>
+              <option value="+">x</option>
+              <option value="-">y</option>
+              <option value="*">z</option>
+              <option value="/">s</option>
+            </select>
+          </div>
           <p class="chuck__text">hold for joke</p>
         </div>
       </div>
@@ -158,7 +169,7 @@ closeIcon.onclick = function() {
         <div class="clock__wrapper">
           <!-- TO DO: amend this so it closes the time -->
           <img
-            class="clock--close"
+            class="modal--close"
             src="./assets/controls/Close.svg"
             alt="Close icon"
           />
@@ -168,7 +179,7 @@ closeIcon.onclick = function() {
         <div class="clock__wrapper" id="clockContainer">
           <!-- TO DO: amend this so it closes the date -->
           <img
-            class="clock--close"
+            class="modal--close"
             src="./assets/controls/Close.svg"
             alt="Close icon"
           />

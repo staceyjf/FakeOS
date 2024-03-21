@@ -3,8 +3,8 @@
 
 .desktop {
   flex-grow: 1; // takes up the remainder vh
-  overflow-x: hidden;
-  position: relative; // allows me to use position: absolute for the icons
+  // overflow-x: hidden;
+  position: relative; // allows me to use position: absolute for the icons etc
   @extend %macOS-wallpaper;
   @extend %border-sides;
   @extend %rounded-border-bottom;
