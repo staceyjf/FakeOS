@@ -27,8 +27,10 @@ openModal(allIcons);
 
 document.getElementById("chuckForm").addEventListener("submit", (event) => {
   event.preventDefault();
-  const jokeText = document.getElementById("chuckText");
-  const selectedOption = document.getElementById("chuckCategory").value;
+  const categories = document.getElementById("chuckCategory");
+  const category = categories.value;
+  const jokeParagraph = document.getElementById("chuckText");
 
-  console.log(selectedOption);
+  console.log(category);
+  addJokes(category, jokeParagraph);
 });
