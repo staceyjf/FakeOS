@@ -10,6 +10,7 @@ import { openModal, closeModal } from "./DOM/modalHandler.js";
 // icons
 // creates a NODE list which is a snapshot in time (don't need to dynamically update so fine to use)
 const allIcons = document.querySelectorAll(".icon");
+const allModals = document.querySelectorAll(".modal");
 const printer = document.querySelector("#printerBtn");
 const other = document.querySelector("#otherBtn");
 const categories = document.getElementById("chuckCategory");
@@ -27,11 +28,16 @@ function initialize() {
   updateClockEl(calculateTimeDate, clockDate, clockTime, clockContainer);
 }
 
-// trigger the modals to open when clicked
+// add an eventlistner all els with icon class
 openModal({
   icons: allIcons,
   jokeParagraph: jokeParagraph,
   category: category,
+});
+
+// add an eventlistner all els with modal class
+closeModal({
+  modals: allModals,
 });
 
 document.getElementById("chuckForm").addEventListener("submit", (event) => {
