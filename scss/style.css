@@ -375,9 +375,10 @@ template {
   margin: 0;
   padding: 5px 3px;
   background-color: white;
-  font-family: "Press Start 2P", system-ui;
-  font-weight: 0;
-  letter-spacing: 0.15em;
+  font-family: "IBM Plex Sans", "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.025em;
+  font-size: 1.15em;
 }
 .icon__computer img, .icon__floppy img, .icon__printer img, .icon__trash img {
   height: 100%;
@@ -397,6 +398,7 @@ template {
   box-shadow: 0px 2px 0px #004d80;
   font-family: "IBM Plex Sans", "Helvetica Neue", sans-serif;
   font-weight: 300;
+  letter-spacing: 0.025em;
 }
 .modal__btn:hover {
   background-color: #333;
@@ -406,7 +408,7 @@ template {
 
 .modal {
   display: none;
-  position: absolute;
+  position: relative;
   top: 5em;
   left: 15em;
   background-color: white;
@@ -416,14 +418,24 @@ template {
   z-index: 2;
 }
 .modal__frame {
+  position: relative;
   height: 25px;
+  width: 100%;
   background-color: white;
   border-top: 3px solid black;
+  display: flex;
+  align-items: center;
+}
+.modal__frame h4 {
+  flex: 1;
+  font-family: "IBM Plex Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+  padding: 0.5em;
+  text-align: center;
 }
 .modal__frame img {
-  position: relative;
-  top: 0.25em;
-  left: 0.25em;
+  padding: 0.5em;
 }
 .show {
   display: block;
@@ -513,12 +525,18 @@ header {
   letter-spacing: 0.15em;
   padding: 1em;
 }
+.chuck form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .chuck__category {
   font-family: "IBM Plex Sans", "Helvetica Neue", sans-serif;
   font-weight: 400;
+  letter-spacing: 0.025em;
   padding: 0.25em;
 }
-.chuck__category--container {
+.chuck__category__container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -529,6 +547,7 @@ header {
 .chuck__text {
   font-family: "IBM Plex Sans", "Helvetica Neue", sans-serif;
   font-weight: 400;
+  letter-spacing: 0.025em;
   flex: 1;
   width: 100%;
   padding: 1em;

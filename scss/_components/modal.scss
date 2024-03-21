@@ -5,7 +5,7 @@
 .modal {
   // TO DO INVESTIGATE DRAG AND DROP if time
   display: none;
-  position: absolute;
+  position: relative;
   top: 5em;
   left: 15em;
   background-color: white;
@@ -15,15 +15,26 @@
   z-index: 2;
 
   &__frame {
+    position: relative;
     height: 25px;
+    width: 100%;
     background-color: white;
     @extend %border-sides;
     border-top: 3px solid black;
+    display: flex;
+    align-items: center;
+
+    & h4 {
+      flex: 1;
+      @include bv.font--secondary(400);
+      padding: 0.5em;
+      text-align: center;
+    }
 
     & img {
-      position: relative;
-      top: 0.25em;
-      left: 0.25em;
+      // width: 100%;
+      // height: 100%;
+      padding: 0.5em;
     }
   }
 

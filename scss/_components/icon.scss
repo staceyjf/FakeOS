@@ -35,7 +35,8 @@
     margin: 0;
     padding: 5px 3px;
     background-color: white;
-    @include bv.font--primary(0);
+    @include bv.font--secondary(500);
+    font-size: 1.15em;
   }
 
   &__computer,

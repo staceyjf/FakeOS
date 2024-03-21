@@ -15,6 +15,7 @@ $light-color: #e9ecea;
 @mixin font--secondary($weight) {
   font-family: "IBM Plex Sans", "Helvetica Neue", sans-serif; //Geneva
   font-weight: $weight;
+  letter-spacing: 0.025em;
 }
 
 %macOS-wallpaper {
