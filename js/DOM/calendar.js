@@ -2,20 +2,15 @@ import fetchDays from "../logic/fetchDays.js";
 
 const calendarNavIcons = document.querySelectorAll(".calendar-navigation i");
 
+// Initialize date, year, and month
+let date = new Date();
+let year = date.getFullYear();
+let month = date.getMonth();
+
 // NODES
 export function handleCalendar() {
   calendarNavIcons.forEach((icon) => {
-    icon.addEventListener("click", () => {
-      // Call populateCalendar and get the returned object
-      let data = fetchDays();
-
-      console.log(data);
-      // set the date
-      let date = data.date;
-      let year = data.year;
-      let month = data.month;
-      let months = data.months;
-
+    icon.addEventListener("click", async () => {
       // change months based on which "icon" is being clicked on eg forward or back
       month = icon.id === "calendar-prev" ? month - 1 : month + 1;
 
@@ -26,6 +21,11 @@ export function handleCalendar() {
         year = date.getFullYear(); // set to the revised year
         month = date.getMonth(); // set to the revised year
       }
+
+      // Call fetchDays() after updating the month and year
+      const data = await fetchDays(year, month);
+      const generatedDates = data.generatedDates;
+      const months = data.months;
 
       populateCalendar(generatedDates, month, months, year);
     });

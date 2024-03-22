@@ -1,8 +1,7 @@
-export default function fetchDays() {
+export default function fetchDays(year, month) {
   let date = new Date(); // current date and time
   // output: Wed Sep 15 2022 17:26:37 GMT-0700 (Pacific Daylight Time)
-  let year = date.getFullYear();
-  let month = date.getMonth();
+
   const months = [
     "January",
     "February",
