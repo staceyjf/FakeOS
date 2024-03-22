@@ -3,6 +3,20 @@ export default function fetchDays() {
   // output: Wed Sep 15 2022 17:26:37 GMT-0700 (Pacific Daylight Time)
   let year = date.getFullYear();
   let month = date.getMonth();
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
 
   // calculate the different elements of the month
   let firstDay = new Date(year, month, 1).getDay();
@@ -44,8 +58,8 @@ export default function fetchDays() {
   // return the data needed for current date header and calendar-dates
   return {
     generatedDates, // day strings
-    date,
     month,
+    months,
     year,
   };
 }

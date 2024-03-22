@@ -37,8 +37,13 @@ export default function openModal({ icons, jokeParagraph }) {
         case "clockCalendarBtnOpen":
           try {
             console.log(`${icon.id} is opening ${modalEl}`);
-            const days = fetchDays();
-            populateCalendar(days);
+            const data = fetchDays();
+            populateCalendar(
+              data.month,
+              data.months,
+              data.year,
+              data.generatedDates
+            );
             displayModal(modalEl);
           } catch (e) {
             console.error("Error with creating calendar:", e);

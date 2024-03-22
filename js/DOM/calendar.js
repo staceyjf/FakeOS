@@ -2,22 +2,6 @@ import fetchDays from "../logic/fetchDays.js";
 
 const calendarNavIcons = document.querySelectorAll(".calendar-navigation i");
 
-// define the months for the calendar header
-const months = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
-
 // NODES
 export function handleCalendar() {
   calendarNavIcons.forEach((icon) => {
@@ -29,6 +13,7 @@ export function handleCalendar() {
       let date = data.date;
       let year = data.year;
       let month = data.month;
+      let months = data.months;
 
       // change months based on which "icon" is being clicked on eg forward or back
       month = icon.id === "calendar-prev" ? month - 1 : month + 1;
@@ -41,17 +26,17 @@ export function handleCalendar() {
         month = date.getMonth(); // set to the revised year
       }
 
-      populateCalendar(data);
+      populateCalendar(generatedDates, month, months, year);
     });
   });
 }
 
-export function populateCalendar(data) {
+export function populateCalendar(generatedDates, month, months, year) {
   // Update the header with the current month
-  document.querySelector(".calendar__curr-date").innerText = `${
-    data.months[data.month]
-  } ${data.year}`;
+  document.querySelector(
+    ".calendar__curr-date"
+  ).innerText = `${months[month]} ${year}`;
 
   // manipluate my ul placeholder  with generated dates
-  document.querySelector(".calendar__dates").innerHTML = data.generatedDates;
+  document.querySelector(".calendar__dates").innerHTML = generatedDates;
 }
