@@ -19,13 +19,16 @@ const months = [
 ];
 
 // NODES
-export default async function handleCalendar() {
+export function handleCalendar() {
   calendarNavIcons.forEach((icon) => {
     icon.addEventListener("click", () => {
+      // Call populateCalendar and get the returned object
+      let data = fetchDays();
+
       // set the date
-      let date = new Date();
-      let year = date.getFullYear();
-      let month = date.getMonth();
+      let date = data.date;
+      let year = data.year;
+      let month = data.month;
 
       // change months based on which "icon" is being clicked on eg forward or back
       month = icon.id === "calendar-prev" ? month - 1 : month + 1;
@@ -38,21 +41,17 @@ export default async function handleCalendar() {
         month = date.getMonth(); // set to the revised year
       }
 
-      // Call fetchDays and get the returned object
-      let data = fetchDays();
-      // data = { generatedDates, month, year,}
-      month = data.month;
-      year = data.year;
-      generatedDates = data.generatedDates;
-
-      // Update the header with the current month
-      document.querySelector(".calendar__curr-date").innerText = `${
-        data.months[data.month]
-      } ${data.year}`;
-
-      // manipluate my ul placeholder  with generated dates
-      document.querySelector(".calendar__dates").innerHTML =
-        data.generatedDates;
+      populateCalendar(data);
     });
   });
+}
+
+export function populateCalendar(data) {
+  // Update the header with the current month
+  document.querySelector(".calendar__curr-date").innerText = `${
+    data.months[data.month]
+  } ${data.year}`;
+
+  // manipluate my ul placeholder  with generated dates
+  document.querySelector(".calendar__dates").innerHTML = data.generatedDates;
 }

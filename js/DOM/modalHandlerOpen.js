@@ -1,5 +1,7 @@
+// logic
 import fetchJokes from "../logic/fetchJokes.js";
-// Modals
+import fetchDays from "../logic/fetchDays.js";
+import { populateCalendar } from "../DOM/calendar.js";
 
 // a new scope if fired for each click even
 export default function openModal({ icons, jokeParagraph }) {
@@ -26,11 +28,21 @@ export default function openModal({ icons, jokeParagraph }) {
           }
           break;
         case "clockDateBtnOpen":
-          displayModal(modalEl);
+          try {
+            displayModal(modalEl);
+          } catch (e) {
+            console.error("Error with opening date:", e);
+          }
           break;
         case "clockCalendarBtnOpen":
-          console.log(`${icon.id} is opening ${modalEl}`);
-          displayModal(modalEl);
+          try {
+            console.log(`${icon.id} is opening ${modalEl}`);
+            const days = fetchDays();
+            populateCalendar(days);
+            displayModal(modalEl);
+          } catch (e) {
+            console.error("Error with creating calendar:", e);
+          }
           break;
         default:
           alert("This icon is just for show");

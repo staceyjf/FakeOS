@@ -4,19 +4,12 @@ export default function fetchDays() {
   let year = date.getFullYear();
   let month = date.getMonth();
 
-  // calculate the first day of the month
+  // calculate the different elements of the month
   let firstDay = new Date(year, month, 1).getDay();
-
-  // laste date of the month
   let lastdate = new Date(year, month + 1, 0).getDate();
-
-  // calculate the last day
   let lastDay = new Date(year, month, lastdate).getDay();
-
-  // calculate the last date of the previous month
   let monthlastdate = new Date(year, month, 0).getDate();
 
-  // dynmically generate days
   let generatedDates = "";
 
   // add previous months days to generatedDays
@@ -51,6 +44,7 @@ export default function fetchDays() {
   // return the data needed for current date header and calendar-dates
   return {
     generatedDates, // day strings
+    date,
     month,
     year,
   };
