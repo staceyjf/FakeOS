@@ -9,7 +9,7 @@ export default async function handleCalendar() {
       // Check if the icon is "calendar-prev' or "calendar-next"
       month = icon.id === "calendar-prev" ? month - 1 : month + 1;
 
-      // Check if the month is out of range
+      // check that month is in range
       if (month < 0 || month > 11) {
         // Set the date to the first day of the month with the new year
         date = new Date(year, month, new Date().getDate());
@@ -32,8 +32,7 @@ export default async function handleCalendar() {
         data.months[data.month]
       } ${data.year}`;
 
-      // update the HTML of the dates element
-      // with the generated calendar
+      // manipluate my ul placeholder  with generated dates
       document.querySelector(".calendar__dates").innerHTML =
         data.generatedDates;
     });
