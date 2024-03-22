@@ -12,6 +12,10 @@
     width: max-content;
   }
 
+  &__img {
+    height: 25px;
+  }
+
   &__wrapper {
     background: white;
     @extend %box-shadow-border-all;

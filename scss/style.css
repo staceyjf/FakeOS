@@ -569,6 +569,9 @@ header {
   flex-direction: column;
   width: max-content;
 }
+.clock__img {
+  height: 25px;
+}
 .clock__wrapper {
   background: white;
   column-gap: 1.5em;

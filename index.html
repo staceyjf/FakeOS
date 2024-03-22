@@ -173,9 +173,16 @@
       <!-- clock -->
       <div class="clock__container">
         <div class="clock__wrapper">
+          <img
+            class="modal--close"
+            id="clockDateBtnClose"
+            src="./assets/controls/Close.svg"
+            alt="Close icon"
+            data-modal-id="clockContainer"
+          />
           <div class="clock__display" id="clockTime">00.00.00</div>
           <img
-            class="icon"
+            class="icon clock__img"
             id="clockDateBtnOpen"
             src="./assets/controls/key.png"
             alt="Close icon"
@@ -184,14 +191,6 @@
         </div>
 
         <div class="clock__wrapper clock__wrapper--hidden" id="clockContainer">
-          <!-- TO DO: amend this so it closes the date -->
-          <img
-            class="modal--close"
-            id="clockDateBtnClose"
-            src="./assets/controls/Close.svg"
-            alt="Close icon"
-            data-modal-id="clockContainer"
-          />
           <div class="clock__display" id="clockDate">00:00:84</div>
         </div>
       </div>
