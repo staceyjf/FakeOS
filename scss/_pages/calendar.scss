@@ -2,9 +2,8 @@
 @use "../_partials/brand-variables" as bv;
 
 .calendar {
-  &--container {
+  &__container {
     position: relative;
-    background: #fff;
     width: 450px;
     border-radius: 10px;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
@@ -39,14 +38,71 @@
       &:last-child {
         margin-right: -10px;
       }
-
-      &:hover {
-        background: bv.$light-color;
-      }
     }
   }
 
   &__body {
     padding: 20px;
+
+    & ul {
+      list-style: none;
+      flex-wrap: wrap;
+      display: flex;
+      text-align: center;
+      @include bv.font--secondary(400);
+    }
+
+    & li {
+      width: calc(100% / 7);
+      font-size: 1.07rem;
+      color: bv.$primary-color;
+    }
+  }
+
+  .calendar__weekdays {
+    li {
+      cursor: default;
+      font-weight: 500;
+    }
+  }
+
+  .calendar__dates {
+    li {
+      margin-top: 30px;
+      position: relative;
+      z-index: 1;
+      cursor: pointer;
+
+      &.inactive {
+        color: bv.$primary-color;
+      }
+
+      &.active {
+        color: bv.$light-color;
+
+        &::before {
+          background: red;
+        }
+      }
+
+      &::before {
+        position: absolute;
+        content: "";
+        z-index: -1;
+        top: 50%;
+        left: 50%;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      &:not(.active):hover::before {
+        background: #e4e1e1;
+      }
+    }
+  }
+  &__dates {
+    margin-bottom: 20px;
   }
 }

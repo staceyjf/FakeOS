@@ -596,9 +596,8 @@ header {
   align-self: center;
 }
 
-.calendar--container {
+.calendar__container {
   position: relative;
-  background: #fff;
   width: 450px;
   border-radius: 10px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
@@ -632,11 +631,58 @@ header {
 .calendar-navigation i:last-child {
   margin-right: -10px;
 }
-.calendar-navigation i:hover {
-  background: #e9ecea;
-}
 .calendar__body {
   padding: 20px;
+}
+.calendar__body ul {
+  list-style: none;
+  flex-wrap: wrap;
+  display: flex;
+  text-align: center;
+  font-family: "IBM Plex Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+}
+.calendar__body li {
+  width: 14.2857142857%;
+  font-size: 1.07rem;
+  color: black;
+}
+.calendar .calendar__weekdays li {
+  cursor: default;
+  font-weight: 500;
+}
+.calendar .calendar__dates li {
+  margin-top: 30px;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+.calendar .calendar__dates li.inactive {
+  color: black;
+}
+.calendar .calendar__dates li.active {
+  color: #e9ecea;
+}
+.calendar .calendar__dates li.active::before {
+  background: red;
+}
+.calendar .calendar__dates li::before {
+  position: absolute;
+  content: "";
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.calendar .calendar__dates li:not(.active):hover::before {
+  background: #e4e1e1;
+}
+.calendar__dates {
+  margin-bottom: 20px;
 }
 
 body {
