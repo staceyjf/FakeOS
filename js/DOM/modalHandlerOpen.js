@@ -6,7 +6,7 @@ import { populateCalendar } from "../DOM/calendar.js";
 // a new scope if fired for each click even
 export default function openModal({ icons, jokeParagraph }) {
   icons.forEach((icon) => {
-    // console.log(`icon.id: ${icon.id}`);
+    console.log(`icon.id: ${icon.id}`);
 
     icon.addEventListener("click", async () => {
       let modalId = icon.dataset.modalId; // get the modal id from custom HTML attribute
@@ -36,13 +36,14 @@ export default function openModal({ icons, jokeParagraph }) {
           break;
         case "clockCalendarBtnOpen":
           try {
-            console.log(`${icon.id} is opening ${modalEl}`);
-            const data = fetchDays();
+            console.log(`${icon.id} is opening ${modalEl.outerHTML}`);
+            const data = await fetchDays();
+            console.log(JSON.stringify(data.generatedDates));
             populateCalendar(
+              data.generatedDates,
               data.month,
               data.months,
-              data.year,
-              data.generatedDates
+              data.year
             );
             displayModal(modalEl);
           } catch (e) {

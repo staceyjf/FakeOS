@@ -33,9 +33,9 @@ function setupEventListeners() {
 
 function initialize() {
   updateClockEl(calculateTimeDate, clockDate, clockTime, clockContainer);
-  const data = fetchDays();
-  console.log(data);
-  populateCalendar(data.generatedDates, data.month, data.months, data.year);
+  // const data = fetchDays();
+  // console.log(data);
+  // populateCalendar(data.generatedDates, data.month, data.months, data.year);
   setupEventListeners();
 }
 
