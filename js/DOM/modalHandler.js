@@ -2,22 +2,21 @@ import fetchJokes from "../logic/fetchJokes.js";
 // Modals
 
 // a new scope if fired for each click even
-export function openModal({ icons, jokeParagraph, category }) {
+export function openModal({ icons, jokeParagraph }) {
   icons.forEach((icon) => {
     icon.addEventListener("click", async () => {
       const modalId = icon.dataset.modalId; // get the modal id from the data-modal attribute
       const modalEl = document.getElementById(modalId); // select the modal
+
       switch (icon.id) {
         case "printerBtn--open":
-          console.log("printer is working");
           window.print(); // opens the window's print method
           break;
         case "chuckBtn--open":
           try {
-            const joke = await fetchJokes(jokeParagraph, category); // wait for fetchJokes to complete
+            const joke = await fetchJokes(); // wait for fetchJokes to complete
             console.log(joke);
             jokeParagraph.innerText = joke;
-            console.log("Chuck has been opened", icon);
             displayModal(modalEl); // display modal once joke has been updated
           } catch (e) {
             console.error("Error fetching joke:", e);

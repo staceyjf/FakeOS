@@ -9,9 +9,6 @@ import { openModal, closeModal } from "./DOM/modalHandler.js";
 // creates a NODE list which is a snapshot in time (don't need to dynamically update so fine to use)
 const allIcons = document.querySelectorAll(".icon");
 const modalCloseBtns = document.querySelectorAll(".modal--close");
-
-const categories = document.getElementById("chuckCategory");
-const category = categories.value;
 const jokeParagraph = document.getElementById("chuckText");
 
 // NODES
@@ -21,24 +18,28 @@ const clockDate = document.querySelector("#clockDate");
 const clockTime = document.querySelector("#clockTime");
 const clockContainer = document.querySelector("#clockContainer");
 
+function setupEventListeners() {
+  // add an eventlistener all els with icon class
+  openModal({
+    icons: allIcons,
+    jokeParagraph,
+  });
+
+  // add an eventlistener all els with modal class
+  closeModal({
+    modals: modalCloseBtns,
+  });
+
+  // handle eventlistener for chuck form
+  handleJokeSubmit(jokeParagraph);
+}
+
 function initialize() {
   // initialise clock
   updateClockEl(calculateTimeDate, clockDate, clockTime, clockContainer);
+
+  // setup event listeners
+  setupEventListeners();
 }
 
-// add an eventlistener all els with icon class
-openModal({
-  icons: allIcons,
-  jokeParagraph: jokeParagraph,
-  category: category,
-});
-
-// add an eventlistener all els with modal class
-closeModal({
-  modals: modalCloseBtns,
-});
-
-// handle eventlistner for chuck form
-handleJokeSubmit(jokeParagraph, category);
-
-initialize(); // start the app with the relevant actios
+initialize(); // start the app with the relevant actions
