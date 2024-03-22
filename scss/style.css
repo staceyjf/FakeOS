@@ -564,7 +564,7 @@ header {
 .clock__container {
   position: absolute;
   right: 1em;
-  bottom: 1em;
+  bottom: 2em;
   display: flex;
   flex-direction: column;
   width: max-content;
