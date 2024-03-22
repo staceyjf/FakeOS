@@ -1,0 +1,52 @@
+// partials
+@use "../_partials/brand-variables" as bv;
+
+.calendar {
+  &--container {
+    position: relative;
+    background: #fff;
+    width: 450px;
+    border-radius: 10px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    padding: 25px 30px 10px;
+    justify-content: space-between;
+
+    & p {
+      @include bv.font--primary(500);
+    }
+  }
+
+  &-navigation {
+    display: flex;
+
+    & i {
+      height: 38px;
+      width: 38px;
+      margin: 0 1px;
+      cursor: pointer;
+      text-align: center;
+      line-height: 38px;
+      border-radius: 50%;
+      user-select: none;
+      font-size: 1.9rem;
+      color: bv.$primary-color;
+
+      &:last-child {
+        margin-right: -10px;
+      }
+
+      &:hover {
+        background: bv.$light-color;
+      }
+    }
+  }
+
+  &__body {
+    padding: 20px;
+  }
+}

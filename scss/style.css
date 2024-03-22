@@ -563,8 +563,8 @@ header {
 
 .clock__container {
   position: absolute;
-  right: 1em;
-  bottom: 2em;
+  right: 25em;
+  bottom: 10em;
   display: flex;
   flex-direction: column;
   width: max-content;
@@ -594,6 +594,49 @@ header {
   letter-spacing: 0.15em;
   min-width: fit-content;
   align-self: center;
+}
+
+.calendar--container {
+  position: relative;
+  background: #fff;
+  width: 450px;
+  border-radius: 10px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+.calendar__header {
+  display: flex;
+  align-items: center;
+  padding: 25px 30px 10px;
+  justify-content: space-between;
+}
+.calendar__header p {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+}
+.calendar-navigation {
+  display: flex;
+}
+.calendar-navigation i {
+  height: 38px;
+  width: 38px;
+  margin: 0 1px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 50%;
+  user-select: none;
+  font-size: 1.9rem;
+  color: black;
+}
+.calendar-navigation i:last-child {
+  margin-right: -10px;
+}
+.calendar-navigation i:hover {
+  background: #e9ecea;
+}
+.calendar__body {
+  padding: 20px;
 }
 
 body {

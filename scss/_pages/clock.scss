@@ -5,8 +5,8 @@
 .clock {
   &__container {
     position: absolute; // in relation to desktop
-    right: 1em;
-    bottom: 2em;
+    right: 25em;
+    bottom: 10em;
     display: flex;
     flex-direction: column;
     width: max-content;
