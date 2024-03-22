@@ -316,7 +316,7 @@ template {
   margin: 0;
 }
 
-.clock__wrapper {
+.clock__wrapper, .clock__wrapper.show {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -327,7 +327,7 @@ template {
   background-size: 4px 4px;
 }
 
-.clock__wrapper {
+.clock__wrapper, .clock__wrapper.show {
   border: 3px solid black;
   box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.9);
 }
@@ -567,7 +567,7 @@ header {
   bottom: 1em;
   display: flex;
   flex-direction: column;
-  width: min-content;
+  width: max-content;
 }
 .clock__wrapper {
   background: white;
@@ -578,7 +578,9 @@ header {
   display: none;
 }
 .clock__wrapper.show {
-  display: block;
+  background: white;
+  column-gap: 1.5em;
+  padding: 0.75em;
 }
 .clock--close {
   align-self: flex-start;
