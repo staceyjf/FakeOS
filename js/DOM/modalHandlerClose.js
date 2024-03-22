@@ -1,7 +1,7 @@
 // TO DO refactor into one reusable function
 export default function closeModal({ modals }) {
   modals.forEach((modalCloseBtn) => {
-    console.log(modalCloseBtn.id);
+    // console.log(modalCloseBtn.id);
     modalCloseBtn.addEventListener("click", () => {
       const modalId = modalCloseBtn.dataset.modalId;
       const modalEl = document.getElementById(modalId);

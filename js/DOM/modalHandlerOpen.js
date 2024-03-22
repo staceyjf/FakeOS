@@ -6,7 +6,7 @@ import { populateCalendar } from "../DOM/calendar.js";
 // a new scope if fired for each click even
 export default function openModal({ icons, jokeParagraph }) {
   icons.forEach((icon) => {
-    console.log(`icon.id: ${icon.id}`);
+    // console.log(`icon.id: ${icon.id}`);
 
     icon.addEventListener("click", async () => {
       let modalId = icon.dataset.modalId; // get the modal id from custom HTML attribute

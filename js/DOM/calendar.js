@@ -9,6 +9,7 @@ export function handleCalendar() {
       // Call populateCalendar and get the returned object
       let data = fetchDays();
 
+      console.log(data);
       // set the date
       let date = data.date;
       let year = data.year;
@@ -34,9 +35,9 @@ export function handleCalendar() {
 export function populateCalendar(generatedDates, month, months, year) {
   // Update the header with the current month
   document.querySelector(
-    ".calendar__curr-date"
+    "#calendarDateHeader"
   ).innerText = `${months[month]} ${year}`;
 
   // manipluate my ul placeholder  with generated dates
-  document.querySelector(".calendar__dates").innerHTML = generatedDates;
+  document.querySelector("#generatedCalendar").innerHTML = generatedDates;
 }

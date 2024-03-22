@@ -55,6 +55,11 @@ export default function fetchDays() {
     j++;
   }
 
+  console.log(`this is ${typeof generatedDates} in generatedDates`);
+  console.log(`this is ${month} in month}`);
+  console.log(`this is ${months} in months}`);
+  console.log(`this is ${year} in year}`);
+
   // return the data needed for current date header and calendar-dates
   return {
     generatedDates, // day strings
