@@ -4,13 +4,13 @@ import fetchJokes from "../logic/fetchJokes.js";
 // a new scope if fired for each click even
 export default function openModal({ icons, jokeParagraph }) {
   icons.forEach((icon) => {
-    console.log(icon.id);
+    console.log(`icon.id: ${icon.id}`);
+
     icon.addEventListener("click", async () => {
       let modalId = icon.dataset.modalId; // get the modal id from custom HTML attribute
       console.log(`modalId: ${modalId}`); // log the modalId
 
       let modalEl = document.getElementById(modalId); // select the modal
-      console.log(modalEl); // log the modalEl
 
       switch (icon.id) {
         case "printerBtn--open":
@@ -26,6 +26,9 @@ export default function openModal({ icons, jokeParagraph }) {
           }
           break;
         case "clockDateBtnOpen":
+          displayModal(modalEl);
+          break;
+        case "clockCalendarBtnOpen":
           console.log(`${icon.id} is opening ${modalEl}`);
           displayModal(modalEl);
           break;

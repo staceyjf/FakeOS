@@ -17,6 +17,9 @@ export default function closeModal({ modals }) {
           break;
         case "clockDateBtnClose":
           hidModal(modalEl);
+          break;
+        case "clockCalendarBtnClose":
+          hidModal(modalEl);
           console.log(`${modalCloseBtn.id} has closed ${modalEl.id}`);
           break;
         default:

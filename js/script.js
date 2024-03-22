@@ -1,8 +1,8 @@
 console.log("hi script is working");
-// LOGIC
 import calculateTimeDate from "./logic/fetchTime.js";
 import handleJokeSubmit from "./DOM/chuck.js";
 import { updateClockEl } from "./DOM/clock.js";
+import handleCalendar from "./DOM/calendar.js";
 import closeModal from "./DOM/modalHandlerClose.js";
 import openModal from "./DOM/modalHandlerOpen.js";
 
