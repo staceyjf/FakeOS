@@ -10,6 +10,7 @@ import openModal from "./DOM/modalHandlerOpen.js";
 // creates a NODE list which is a snapshot in time (don't need to dynamically update so fine to use)
 const allIcons = document.querySelectorAll(".icon");
 const modalCloseBtns = document.querySelectorAll(".modal--close");
+// console.log(modalCloseBtns);
 const jokeParagraph = document.getElementById("chuckText");
 
 // NODES

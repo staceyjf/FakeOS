@@ -1,10 +1,11 @@
 // TO DO refactor into one reusable function
 export default function closeModal({ modals }) {
   modals.forEach((modalCloseBtn) => {
+    console.log(modalCloseBtn.id);
     modalCloseBtn.addEventListener("click", () => {
       const modalId = modalCloseBtn.dataset.modalId;
       const modalEl = document.getElementById(modalId);
-      console.log("this is modaEl", modalEl);
+
       switch (modalCloseBtn.id) {
         case "printerBtn":
           console.log(
@@ -13,7 +14,10 @@ export default function closeModal({ modals }) {
           break;
         case "chuckBtn--close":
           hidModal(modalEl);
-          console.log("Chuck has closed", modalCloseBtn);
+          break;
+        case "clockDateBtnClose":
+          hidModal(modalEl);
+          console.log(`${modalCloseBtn.id} has closed ${modalEl.id}`);
           break;
         default:
           throw new Error("There has been an error with closing the modal");
