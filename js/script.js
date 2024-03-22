@@ -3,7 +3,8 @@ console.log("hi script is working");
 import calculateTimeDate from "./logic/fetchTime.js";
 import handleJokeSubmit from "./DOM/chuck.js";
 import { updateClockEl } from "./DOM/clock.js";
-import { openModal, closeModal } from "./DOM/modalHandler.js";
+import closeModal from "./DOM/modalHandlerClose.js";
+import openModal from "./DOM/modalHandlerOpen.js";
 
 // icons
 // creates a NODE list which is a snapshot in time (don't need to dynamically update so fine to use)
@@ -35,11 +36,8 @@ function setupEventListeners() {
 }
 
 function initialize() {
-  // initialise clock
   updateClockEl(calculateTimeDate, clockDate, clockTime, clockContainer);
-
-  // setup event listeners
   setupEventListeners();
 }
 
-initialize(); // start the app with the relevant actions
+initialize();
