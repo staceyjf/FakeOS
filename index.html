@@ -131,22 +131,34 @@
       <!-- chuck -->
       <div class="modal chuck" id="chuck">
         <div class="modal__frame">
-          <img
+          <svg
             class="modal--close"
             id="chuckBtn--close"
-            src="./assets/controls/Close.svg"
-            alt="Close icon"
             data-modal-id="chuck"
-          />
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              x="0.5"
+              y="0.5"
+              width="15"
+              height="15"
+              fill="white"
+              stroke="black"
+            />
+          </svg>
           <h4>Chuck's Jokes</h4>
         </div>
         <div class="chuck__container">
-          <h3 class="chuck__header">Ask Chuck to tell you a Joke</h3>
+          <h3 class="chuck__header">Ask Chuck a Joke</h3>
 
           <form id="chuckForm">
             <div class="chuck__category__container">
               <label class="chuck__category" for="chuckCategory"
-                >Select a Joke Category</label
+                >Joke Category</label
               >
               <select class="chuck__category" id="chuckCategory" required>
                 <option value="" disabled selected>Select a category</option>

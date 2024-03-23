@@ -9,38 +9,39 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); // align the modal against its middle point
-  background-color: white;
   max-width: 50em;
   max-height: 30em;
   background-color: black;
   z-index: 2;
 
   &__frame {
-    max-height: 50px;
+    max-height: 75%;
     width: 100%;
-    background-color: white;
     @extend %border-sides;
+    background-color: white;
     border-top: 3px solid black;
     display: flex;
     align-items: center;
 
     & h4 {
       flex: 1;
-      @include bv.font--secondary(400);
-      text-transform: uppercase;
+
+      @include bv.font--primary(400);
       padding: 0.5em;
       text-align: center;
-    }
-
-    & img {
-      // width: 100%;
-      // height: 100%;
-      padding: 0.5em;
     }
   }
 
   &__btn {
     @extend %btn;
+  }
+
+  &--close {
+    margin: 0 5px;
+
+    &:hover rect {
+      fill: black;
+    }
   }
 }
 

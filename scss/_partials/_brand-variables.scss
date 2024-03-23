@@ -28,6 +28,11 @@ $light-color: #e9ecea;
   box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.9);
 }
 
+%rounded-border-top--thick {
+  border: 8px solid black;
+  border-radius: 10px 10px 0 0;
+}
+
 %rounded-border-top {
   border: 3px solid black;
   border-radius: 10px 10px 0 0;
