@@ -448,6 +448,14 @@ template {
   display: block;
 }
 
+body {
+  cursor: url("../../assets/controls/Click.png");
+}
+
+#clockCalendarBtnOpen {
+  cursor: url("../../assets/controls/Point.png");
+}
+
 header {
   background-color: black;
 }

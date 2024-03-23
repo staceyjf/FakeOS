@@ -1,5 +1,6 @@
 @use "../_partials/normalisation";
 @use "../_partials/helpers";
+@use "../_components/cursors.scss";
 @use "../_partials/brand-variables" as bv;
 
 .clock {
@@ -47,4 +48,8 @@
     min-width: fit-content;
     align-self: center;
   }
+}
+
+#clockCalendarBtnOpen {
+  @extend %pointer-cursor;
 }
