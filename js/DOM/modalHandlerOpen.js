@@ -8,7 +8,7 @@ export default function openModal({ icons, jokeParagraph }) {
   icons.forEach((icon) => {
     console.log(`icon.id: ${icon.id}`);
 
-    icon.addEventListener("click", async () => {
+    icon.addEventListener("dblclick", async () => {
       let modalId = icon.dataset.modalId; // get the modal id from custom HTML attribute
       console.log(`modalId: ${modalId}`); // log the modalId
 
@@ -37,7 +37,7 @@ export default function openModal({ icons, jokeParagraph }) {
         case "clockCalendarBtnOpen":
           try {
             console.log(`${icon.id} is opening ${modalEl.outerHTML}`);
-            let date = new Date()
+            let date = new Date();
             let year = date.getFullYear();
             let month = date.getMonth();
             let data = await fetchDays(year, month);
