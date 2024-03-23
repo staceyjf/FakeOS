@@ -5,9 +5,10 @@
 .modal {
   // TO DO INVESTIGATE DRAG AND DROP if time
   display: none;
-  position: relative;
-  top: 5em;
-  left: 15em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); // align the modal against its middle point
   background-color: white;
   max-width: 50em;
   max-height: 30em;
@@ -15,7 +16,6 @@
   z-index: 2;
 
   &__frame {
-    position: relative;
     max-height: 50px;
     width: 100%;
     background-color: white;

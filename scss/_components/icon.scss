@@ -1,6 +1,6 @@
 @use "../_partials/brand-variables" as bv;
 
-.icon-container {
+.icon__container {
   display: flex;
   flex-wrap: wrap; // wrap the icons into multiple lines
   max-width: 210px;
@@ -14,9 +14,8 @@
 
 .icon {
   z-index: 1;
-  // get rid of the default btn stylings
-  background-color: transparent;
-  border: none;
+  background-color: transparent; // get rid of the default btn stylings
+  border: none; // get rid of the default btn stylings
 
   // control the size of the img
   &__computer,
