@@ -20,6 +20,7 @@ header {
   //sub-menu
   &__sub {
     position: relative; // any child elements of .menu__subnav with position: absolute; will be positioned relative to .menu__subnav
+    z-index: 10; // to sit above the desktop modals
 
     &:first-of-type .menu__btn:first-of-type {
       background-image: url("../../assets/logo/State=off.svg");

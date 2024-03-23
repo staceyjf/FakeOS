@@ -453,6 +453,7 @@ header {
 }
 .menu__sub {
   position: relative;
+  z-index: 10;
 }
 .menu__sub:first-of-type .menu__btn:first-of-type {
   background-image: url("../../assets/logo/State=off.svg");
@@ -508,6 +509,7 @@ header {
 
 .desktop {
   flex-grow: 1;
+  overflow-x: hidden;
   position: relative;
 }
 
