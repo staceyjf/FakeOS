@@ -1,5 +1,6 @@
 // partials
 @use "../_partials/brand-variables" as bv;
+@use "../_components/cursors.scss";
 
 // menu a
 %linkStyle {
@@ -16,6 +17,7 @@ header {
   align-items: center;
   background-color: white;
   @extend %rounded-border-top;
+  @extend %pointer-cursor;
 
   //sub-menu
   &__sub {
@@ -27,6 +29,7 @@ header {
       background-size: cover;
       width: 75px;
       height: 50px; // need to set h&w as it has no content
+      @extend %pointer-cursor;
 
       &:hover {
         background-image: url("../../assets/logo/State=on.svg");
@@ -71,6 +74,7 @@ header {
     margin: 0;
     background-color: inherit;
     @include bv.font--primary(400);
+    @extend %pointer-cursor;
   }
 
   &__btn:hover,

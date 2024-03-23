@@ -50,6 +50,9 @@
   }
 }
 
-#clockCalendarBtnOpen {
+#clockDateBtnClose,
+#clockDateBtnOpen,
+#clockCalendarBtnOpen,
+#clockCalendarBtnClose {
   @extend %pointer-cursor;
 }

@@ -1,5 +1,6 @@
 // partials
 @use "../_partials/brand-variables" as bv;
+@use "../_components/cursors.scss";
 
 .calendar {
   &__container {
@@ -71,7 +72,7 @@
       margin-top: 30px;
       position: relative;
       z-index: 1;
-      cursor: pointer;
+      @extend %pointer-cursor;
 
       &.inactive {
         color: bv.$primary-color;

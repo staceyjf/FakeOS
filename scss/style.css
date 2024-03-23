@@ -352,6 +352,17 @@ template {
   border-left: 3px solid black;
 }
 
+body {
+  cursor: url("../../assets/controls/Click.png");
+}
+
+.calendar .calendar__dates li, #clockDateBtnClose,
+#clockDateBtnOpen,
+#clockCalendarBtnOpen,
+#clockCalendarBtnClose, .menu, .menu__sub:first-of-type .menu__btn:first-of-type, .menu__btn, .icon {
+  cursor: pointer;
+}
+
 .icon__container {
   display: flex;
   flex-wrap: wrap;
@@ -446,14 +457,6 @@ template {
 
 .show {
   display: block;
-}
-
-body {
-  cursor: url("../../assets/controls/Click.png");
-}
-
-#clockCalendarBtnOpen {
-  cursor: url("../../assets/controls/Point.png");
 }
 
 header {
@@ -677,7 +680,6 @@ header {
   margin-top: 30px;
   position: relative;
   z-index: 1;
-  cursor: pointer;
 }
 .calendar .calendar__dates li.inactive {
   color: black;

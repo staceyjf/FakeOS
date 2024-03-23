@@ -1,4 +1,5 @@
 @use "../_partials/brand-variables" as bv;
+@use "../_components/cursors.scss";
 
 .icon__container {
   display: flex;
@@ -16,6 +17,7 @@
   z-index: 1;
   background-color: transparent; // get rid of the default btn stylings
   border: none; // get rid of the default btn stylings
+  @extend %pointer-cursor;
 
   // control the size of the img
   &__computer,
