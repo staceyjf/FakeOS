@@ -393,6 +393,8 @@ body {
   z-index: 1;
   background-color: transparent;
   border: none;
+}
+.icon__computer, .icon__trash, .icon__printer, .icon__chuck, .icon__notes {
   width: 90px;
   height: 105px;
 }
