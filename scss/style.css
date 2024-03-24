@@ -359,7 +359,7 @@ body {
 .calendar .calendar__dates li, #clockDateBtnClose,
 #clockDateBtnOpen,
 #clockCalendarBtnOpen,
-#clockCalendarBtnClose, .menu, .menu__sub:first-of-type .menu__btn:first-of-type, .menu__btn, .icon {
+#clockCalendarBtnClose, .menu, .menu__sub:first-of-type .menu__btn:first-of-type, .menu__btn, .modal__frame button, .icon {
   cursor: pointer;
 }
 
@@ -442,6 +442,24 @@ body {
   color: white;
 }
 
+.menu__btn, .modal__frame button {
+  border: none;
+  outline: none;
+  color: black;
+  height: 50px;
+  flex: 1;
+  padding: 14px 16px;
+  margin: 0;
+  background-color: inherit;
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+}
+.menu__btn:hover, .modal__frame button:hover {
+  background-color: black;
+  color: white;
+}
+
 .modal {
   display: none;
   position: absolute;
@@ -460,6 +478,10 @@ body {
   border-top: 3px solid black;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+}
+.modal__frame button {
+  max-width: 25%;
 }
 .modal__frame h4 {
   flex: 1;
@@ -468,10 +490,6 @@ body {
   letter-spacing: 0.15em;
   text-align: center;
   width: 100%;
-}
-.modal__frame h4 input {
-  border: none;
-  text-align: center;
 }
 .modal--close {
   margin: 1em;
@@ -531,20 +549,7 @@ header {
   flex-direction: column;
   max-width: max-content;
 }
-.menu__btn {
-  border: none;
-  outline: none;
-  color: black;
-  height: 50px;
-  flex: 1;
-  padding: 14px 16px;
-  margin: 0;
-  background-color: inherit;
-  font-family: "Press Start 2P", system-ui;
-  font-weight: 400;
-  letter-spacing: 0.15em;
-}
-.menu__btn:hover, .menu__sub-content a:hover {
+.menu__sub-content a:hover {
   background-color: black;
   color: white;
 }

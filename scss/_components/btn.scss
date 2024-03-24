@@ -1,5 +1,6 @@
 // partials
 @use "../_partials/brand-variables" as bv;
+@use "../_components/cursors.scss";
 
 %btn {
   color: white;
@@ -16,6 +17,24 @@
   &:hover {
     background-color: bv.$dark-color;
     border: 2px solid bv.$primary-color;
+    color: white;
+  }
+}
+
+%btn--menu {
+  border: none;
+  outline: none;
+  color: bv.$primary-color;
+  height: 50px;
+  flex: 1;
+  padding: 14px 16px;
+  margin: 0;
+  background-color: inherit;
+  @include bv.font--primary(400);
+  @extend %pointer-cursor;
+
+  &:hover {
+    background-color: bv.$primary-color;
     color: white;
   }
 }

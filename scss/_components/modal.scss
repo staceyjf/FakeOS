@@ -22,6 +22,13 @@
     border-top: 3px solid black;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+
+    // menu button
+    button {
+      @extend %btn--menu;
+      max-width: 25%;
+    }
 
     & h4 {
       flex: 1;
@@ -29,11 +36,6 @@
       // padding: 0.5em;
       text-align: center;
       width: 100%;
-
-      input {
-        border: none;
-        text-align: center;
-      }
     }
   }
 
