@@ -2,6 +2,7 @@ console.log("hi script is working");
 import calculateTimeDate from "./logic/fetchTime.js";
 import { updateClockEl } from "./DOM/clock.js";
 import handleJokeSubmit from "./DOM/chuck.js";
+import handleNotesSubmission from "./DOM/notes.js";
 import { handleCalendar, populateCalendar } from "./DOM/calendar.js";
 import closeModal from "./DOM/modalHandlerClose.js";
 import openModal from "./DOM/modalHandlerOpen.js";
@@ -26,6 +27,7 @@ function setupEventListeners() {
   closeModal({
     modals: modalCloseBtns,
   });
+  handleNotesSubmission();
   handleJokeSubmit(jokeParagraph);
   handleCalendar();
 }
