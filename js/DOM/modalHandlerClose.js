@@ -12,6 +12,9 @@ export default function closeModal({ modals }) {
             "printer doesn't need a case but will keep for refactoring into one function"
           );
           break;
+        case "notesBtn--close":
+          hidModal(modalEl);
+          break;
         case "chuckBtn--close":
           hidModal(modalEl);
           break;
