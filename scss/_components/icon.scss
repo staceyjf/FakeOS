@@ -13,13 +13,25 @@
   right: 2em;
 }
 
+.icon:hover svg path {
+  fill: black;
+  stroke: white;
+}
+.icon:hover svg rect {
+  fill: black;
+  stroke: white;
+}
+.icon:hover svg text {
+  fill: white;
+}
+
 .icon {
   z-index: 1;
   background-color: transparent; // get rid of the default btn stylings
   border: none; // get rid of the default btn stylings
   @extend %pointer-cursor;
 
-  // control the size of the img
+  // control the size of the icons
   &__computer,
   &__floppy,
   &__printer,
@@ -29,8 +41,8 @@
   }
 
   svg text {
-    @include bv.font--primary(500);
-    font-size: 0.5em;
+    @include bv.font--secondary(500);
+    font-size: 1em;
     text-anchor: middle;
   }
 

@@ -375,6 +375,20 @@ body {
   right: 2em;
 }
 
+.icon:hover svg path {
+  fill: black;
+  stroke: white;
+}
+
+.icon:hover svg rect {
+  fill: black;
+  stroke: white;
+}
+
+.icon:hover svg text {
+  fill: white;
+}
+
 .icon {
   z-index: 1;
   background-color: transparent;
@@ -385,10 +399,10 @@ body {
   height: 105px;
 }
 .icon svg text {
-  font-family: "Press Start 2P", system-ui;
+  font-family: "IBM Plex Sans", "Helvetica Neue", sans-serif;
   font-weight: 500;
-  letter-spacing: 0.15em;
-  font-size: 0.5em;
+  letter-spacing: 0.025em;
+  font-size: 1em;
   text-anchor: middle;
 }
 .icon__trash {
