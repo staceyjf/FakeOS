@@ -384,6 +384,13 @@ body {
   width: 90px;
   height: 105px;
 }
+.icon svg text {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  font-size: 0.5em;
+  text-anchor: middle;
+}
 .icon__trash {
   margin-left: auto;
 }

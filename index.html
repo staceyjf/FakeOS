@@ -103,7 +103,41 @@
         </button>
 
         <button class="icon icon__floppy" id="floppyBtn">
-          <img src="./assets/icons/systemFloppy.svg" alt="floppy icon" />
+          <svg
+            viewBox="0 0 59 67"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9 46.3475H50C51.1046 46.3475 52 45.4521 52 44.3475V8.23414C52 7.77527 51.8422 7.33034 51.5531 6.97401L47.3062 1.73986C46.9264 1.27182 46.3559 1 45.7531 1H9C7.89543 1 7 1.89543 7 3V44.3475C7 45.4521 7.89543 46.3475 9 46.3475Z"
+              fill="white"
+              stroke="black"
+            />
+            <path
+              d="M13.0882 47V29.7518C13.0882 28.6472 13.9836 27.7518 15.0882 27.7518H44.4411C45.5457 27.7518 46.4411 28.6472 46.4411 29.7518V47"
+              stroke="black"
+            />
+            <path
+              d="M40.6176 1L40.6176 14.0071C40.6176 15.1117 39.7222 16.0071 38.6176 16.0071L19.3235 16.0071C18.2189 16.0071 17.3235 15.1117 17.3235 14.0071L17.3235 1.00001"
+              stroke="black"
+            />
+            <rect
+              x="30"
+              y="4.10992"
+              width="5.88235"
+              height="8.78723"
+              rx="1.5"
+              fill="white"
+              stroke="black"
+            />
+            <rect
+              width="59"
+              height="19"
+              transform="translate(0 48)"
+              fill="white"
+            />
+            <text x="31" y="64" fill="black">Notes</text>
+          </svg>
         </button>
 
         <button class="icon icon__printer" id="printerBtn--open">
@@ -128,6 +162,65 @@
       </div>
 
       <!-- modals -->
+      <!-- chuck -->
+      <div class="modal chuck" id="chuck">
+        <div class="modal__frame">
+          <svg
+            class="modal--close"
+            id="chuckBtn--close"
+            data-modal-id="chuck"
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              x="0.5"
+              y="0.5"
+              width="15"
+              height="15"
+              fill="white"
+              stroke="black"
+            />
+          </svg>
+          <h4>Chuck's Jokes</h4>
+        </div>
+        <div class="chuck__container">
+          <h3 class="chuck__header">Ask Chuck a Joke</h3>
+
+          <form id="chuckForm">
+            <div class="chuck__category__container">
+              <label class="chuck__category" for="chuckCategory"
+                >Joke Category</label
+              >
+              <select class="chuck__category" id="chuckCategory" required>
+                <option value="" disabled selected>Select a category</option>
+                <option value="animal">Animal</option>
+                <option value="career">Career</option>
+                <option value="celebrity">Celebrity</option>
+                <option value="fashion">Fashion</option>
+                <option value="food">Food</option>
+                <option value="history">History</option>
+                <option value="money">Money</option>
+                <option value="movie">Movie</option>
+                <option value="music">Music</option>
+                <option value="science">Science</option>
+                <option value="sport">Sport</option>
+                <option value="travel">Travel</option>
+              </select>
+            </div>
+            <button id="ChuckJokeBtn" class="modal__btn" type="submit">
+              Get Joke
+            </button>
+          </form>
+          <div class="chuck__text__container">
+            <h4>Chuck say's</h4>
+            <p class="chuck__text" id="chuckText"></p>
+          </div>
+        </div>
+      </div>
+
       <!-- chuck -->
       <div class="modal chuck" id="chuck">
         <div class="modal__frame">

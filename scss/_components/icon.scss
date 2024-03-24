@@ -28,6 +28,12 @@
     height: 105px;
   }
 
+  svg text {
+    @include bv.font--primary(500);
+    font-size: 0.5em;
+    text-anchor: middle;
+  }
+
   &__trash {
     margin-left: auto; // push this to the right side
   }
