@@ -190,6 +190,18 @@
       <!-- clock -->
       <div class="clock__container">
         <div class="clock__wrapper">
+          <div class="clock__display" id="clockTime">00.00.00</div>
+          <img
+            class="icon clock__img"
+            id="clockDateBtnOpen"
+            src="./assets/controls/key.png"
+            alt="Close icon"
+            data-modal-id="date"
+          />
+        </div>
+
+        <!-- Date  -->
+        <div class="clock__wrapper clock__wrapper--hidden" id="date">
           <svg
             class="modal--close"
             id="clockDateBtnClose"
@@ -209,45 +221,7 @@
               stroke="black"
             />
           </svg>
-          <div class="clock__display" id="clockTime">00.00.00</div>
-          <img
-            class="icon clock__img"
-            id="clockDateBtnOpen"
-            src="./assets/controls/key.png"
-            alt="Close icon"
-            data-modal-id="date"
-          />
-        </div>
-
-        <!-- Date  -->
-        <div class="clock__wrapper clock__wrapper--hidden" id="date">
-          <svg
-            class="modal--close"
-            id="clockCalendarBtnClose"
-            data-modal-id="calendar"
-            width="16"
-            height="16"
-            viewBox="0 0 16 16"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <rect
-              x="0.5"
-              y="0.5"
-              width="15"
-              height="15"
-              fill="white"
-              stroke="black"
-            />
-          </svg>
           <div class="clock__display" id="clockDate">00:00:84</div>
-          <!-- <img
-            class="icon clock__img"
-            id="clockCalendarBtnOpen"
-            src="./assets/controls/key.png"
-            alt="Open icon"
-            data-modal-id="calendar"
-          /> -->
           <span
             class="icon clock__img"
             id="clockCalendarBtnOpen"
@@ -261,6 +235,25 @@
         <!-- Calendar  -->
         <div class="clock__wrapper clock__wrapper--hidden" id="calendar">
           <div class="calendar__container">
+            <svg
+              class="modal--close"
+              id="clockCalendarBtnClose"
+              data-modal-id="calendar"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                x="0.5"
+                y="0.5"
+                width="15"
+                height="15"
+                fill="white"
+                stroke="black"
+              />
+            </svg>
             <div class="calendar__header">
               <p class="calendar__curr-date" id="calendarDateHeader"></p>
               <div class="calendar-navigation">
