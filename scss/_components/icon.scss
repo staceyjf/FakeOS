@@ -30,20 +30,13 @@
   background-color: transparent; // get rid of the default btn stylings
   border: none; // get rid of the default btn stylings
   @extend %pointer-cursor;
-
-  // control the size of the icons
-  &__computer,
-  &__floppy,
-  &__printer,
-  &__trash {
-    width: 90px;
-    height: 105px;
-  }
+  width: 90px;
+  height: 105px;
 
   svg text {
     @include bv.font--secondary(500);
-    font-size: 1em;
     text-anchor: middle;
+    font-size: 1em;
   }
 
   &__trash {

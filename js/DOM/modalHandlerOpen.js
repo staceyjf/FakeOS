@@ -15,10 +15,17 @@ export default function openModal({ icons, jokeParagraph }) {
       let modalEl = document.getElementById(modalId); // select the modal
 
       switch (icon.id) {
+        case "notesBtn": // opens notes
+          try {
+            displayModal(modalEl);
+          } catch (e) {
+            console.error("Error with opening date:", e);
+          }
+          break;
         case "printerBtn--open":
           window.print(); // opens the window's print method
           break;
-        case "chuckBtn--open":
+        case "chuckBtn--open": // open's Chuck's Jokes
           try {
             const joke = await fetchJokes(); // wait for fetchJokes to complete
             jokeParagraph.innerText = joke;
@@ -27,14 +34,14 @@ export default function openModal({ icons, jokeParagraph }) {
             console.error("Error fetching joke:", e);
           }
           break;
-        case "clockDateBtnOpen":
+        case "clockDateBtnOpen": // opens clock
           try {
             displayModal(modalEl);
           } catch (e) {
             console.error("Error with opening date:", e);
           }
           break;
-        case "clockCalendarBtnOpen":
+        case "clockCalendarBtnOpen": // opens calendar
           try {
             console.log(`${icon.id} is opening ${modalEl.outerHTML}`);
             let date = new Date();
@@ -62,5 +69,6 @@ export default function openModal({ icons, jokeParagraph }) {
 
 // open
 function displayModal(modalEl) {
+  console.log(modalEl);
   modalEl.classList.add("show");
 }

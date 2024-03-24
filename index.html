@@ -102,7 +102,7 @@
           <img src="./assets/icons/computerfolder.svg" alt="computer icon" />
         </button>
 
-        <button class="icon icon__floppy" id="floppyBtn">
+        <button class="icon icon__notes" id="notesBtn" data-modal-id="notes">
           <svg
             viewBox="0 0 59 67"
             fill="none"
@@ -222,7 +222,56 @@
         </button>
 
         <button class="icon icon__trash" id="trashBtn">
-          <img src="./assets/icons/trash.svg" alt="trash icon" />
+          <svg
+            viewBox="0 0 46 66"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              x="19.5"
+              y="0.5"
+              width="8"
+              height="1.93617"
+              fill="white"
+              stroke="black"
+            />
+            <rect
+              x="7.5"
+              y="2.45744"
+              width="31"
+              height="2.91489"
+              fill="white"
+              stroke="black"
+            />
+            <path
+              d="M8.5 5.39362H37.5V44C37.5 44.8284 36.8284 45.5 36 45.5H10C9.17157 45.5 8.5 44.8284 8.5 44V5.39362Z"
+              fill="white"
+              stroke="black"
+            />
+            <path
+              d="M13 9.78723L13.8989 10.667C14.2833 11.0433 14.5 11.5585 14.5 12.0964V39.0445C14.5 39.7203 14.1588 40.3503 13.5929 40.7195L13 41.1064"
+              stroke="black"
+            />
+            <path
+              d="M19 9.78723L19.8989 10.667C20.2833 11.0433 20.5 11.5585 20.5 12.0964V39.0445C20.5 39.7203 20.1588 40.3503 19.5929 40.7195L19 41.1064"
+              stroke="black"
+            />
+            <path
+              d="M25 9.78723L25.8989 10.667C26.2833 11.0433 26.5 11.5585 26.5 12.0964V39.0445C26.5 39.7203 26.1588 40.3503 25.5929 40.7195L25 41.1064"
+              stroke="black"
+            />
+            <path
+              d="M31 9.78723L31.8989 10.667C32.2833 11.0433 32.5 11.5585 32.5 12.0964V39.0445C32.5 39.7203 32.1588 40.3503 31.5929 40.7195L31 41.1064"
+              stroke="black"
+            />
+            <rect
+              width="46"
+              height="19"
+              transform="translate(0 47)"
+              fill="white"
+            />
+            <text x="25" y="64" fill="black">Trash</text>
+          </svg>
         </button>
       </div>
 
@@ -286,13 +335,13 @@
         </div>
       </div>
 
-      <!-- chuck -->
-      <div class="modal chuck" id="chuck">
+      <!-- notes -->
+      <div class="modal notes" id="notes">
         <div class="modal__frame">
           <svg
             class="modal--close"
-            id="chuckBtn--close"
-            data-modal-id="chuck"
+            id="notesBtn--close"
+            data-modal-id="notes"
             width="16"
             height="16"
             viewBox="0 0 16 16"
@@ -308,40 +357,15 @@
               stroke="black"
             />
           </svg>
-          <h4>Chuck's Jokes</h4>
+          <h4><input type="text" placeholder="Title" /></h4>
         </div>
-        <div class="chuck__container">
-          <h3 class="chuck__header">Ask Chuck a Joke</h3>
 
-          <form id="chuckForm">
-            <div class="chuck__category__container">
-              <label class="chuck__category" for="chuckCategory"
-                >Joke Category</label
-              >
-              <select class="chuck__category" id="chuckCategory" required>
-                <option value="" disabled selected>Select a category</option>
-                <option value="animal">Animal</option>
-                <option value="career">Career</option>
-                <option value="celebrity">Celebrity</option>
-                <option value="fashion">Fashion</option>
-                <option value="food">Food</option>
-                <option value="history">History</option>
-                <option value="money">Money</option>
-                <option value="movie">Movie</option>
-                <option value="music">Music</option>
-                <option value="science">Science</option>
-                <option value="sport">Sport</option>
-                <option value="travel">Travel</option>
-              </select>
-            </div>
-            <button id="ChuckJokeBtn" class="modal__btn" type="submit">
-              Get Joke
-            </button>
+        <div class="Notes__container">
+          <h3 class="Notes__header">Notes hider</h3>
+
+          <form id="NotesForm">
+            <button id="NotesBtn" class="modal__btn" type="submit">Save</button>
           </form>
-          <div class="chuck__text__container">
-            <h4>Chuck say's</h4>
-            <p class="chuck__text" id="chuckText"></p>
-          </div>
         </div>
       </div>
 

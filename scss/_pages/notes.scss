@@ -1,0 +1,65 @@
+// partials
+@use "../_partials/brand-variables" as bv;
+
+// #notes {
+//   display: block;
+// }
+
+.notes {
+  &__container {
+    @extend %rounded-border-top--thick;
+    background-color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    row-gap: 2.75em;
+    padding: 2em;
+  }
+
+  &__header {
+    @include bv.font--primary(400);
+    margin-top: 1em;
+    text-align: center;
+  }
+
+  & form {
+    display: flex;
+    align-items: center;
+    column-gap: 1.5em;
+  }
+
+  &__category {
+    @include bv.font--secondary(400);
+    padding: 0.25em;
+    white-space: nowrap;
+    color: bv.$dark-color;
+
+    &__container {
+      width: 100%;
+      display: flex;
+      white-space: nowrap;
+      justify-content: center;
+      align-items: center;
+      column-gap: 0.5em;
+    }
+  }
+
+  &__text {
+    &__container {
+      @include bv.font--secondary(400);
+      font-style: italic;
+      flex: 1;
+      align-self: center;
+      display: flex;
+      flex-direction: column;
+      row-gap: 1em;
+      padding: 2em;
+      margin-bottom: 1em;
+      text-align: center;
+      background-color: bv.$secondary-color;
+    }
+  }
+}
