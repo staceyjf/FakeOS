@@ -9,8 +9,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); // align the modal against its middle point
-  max-width: 50em;
-  max-height: 30em;
+  width: 45em;
+  max-height: 50em;
   background-color: black;
   z-index: 2;
 
@@ -25,10 +25,15 @@
 
     & h4 {
       flex: 1;
-
       @include bv.font--primary(400);
-      padding: 0.5em;
+      // padding: 0.5em;
       text-align: center;
+      width: 100%;
+
+      input {
+        border: none;
+        text-align: center;
+      }
     }
   }
 

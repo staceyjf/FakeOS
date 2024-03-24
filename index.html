@@ -357,14 +357,16 @@
               stroke="black"
             />
           </svg>
-          <h4><input type="text" placeholder="Title" /></h4>
+          <h4>menu</h4>
         </div>
 
-        <div class="Notes__container">
-          <h3 class="Notes__header">Notes hider</h3>
+        <div class="notes__container">
+          <form id="notesForm">
+            <input type="text" placeholder="Notes Title" required />
 
-          <form id="NotesForm">
-            <button id="NotesBtn" class="modal__btn" type="submit">Save</button>
+            <textarea rows="500" cols="50" placeholder="Add notes"></textarea>
+
+            <!-- <button id="notesBtn" class="modal__btn" type="submit">Save</button> -->
           </form>
         </div>
       </div>
