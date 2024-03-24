@@ -19,6 +19,12 @@
     border-top: 3px solid black;
     margin-top: 0.2em;
 
+    &__header {
+      @include bv.font--primary(400);
+      margin-top: 1em;
+      text-align: center;
+    }
+
     & form {
       display: flex;
       flex-direction: column;

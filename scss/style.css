@@ -573,6 +573,13 @@ header {
   border-top: 3px solid black;
   margin-top: 0.2em;
 }
+.notes__container__header {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  margin-top: 1em;
+  text-align: center;
+}
 .notes__container form {
   display: flex;
   flex-direction: column;

@@ -13,9 +13,6 @@ export default function handleNotesSubmission() {
       const userBodyEl = form.querySelector("textarea");
       const userBody = userBodyEl.value;
 
-      console.log(userHeader);
-      console.log(userBody);
-
       createNotes(userHeader, userBody);
     });
 }
