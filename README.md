@@ -9,7 +9,7 @@ Welcome to FakeOS, a web-based application that pays homage to the classic Macin
 </div>
  
  <br>
-To experience FakeOS, visit the deployed site: [FakeOS](https://fakeos.staceyfanner.com/)
+To experience FakeOS, visit the deployed site: https://fakeos.staceyfanner.com/
 
 ## About the Web App
 
