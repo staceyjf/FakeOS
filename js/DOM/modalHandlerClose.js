@@ -1,6 +1,7 @@
 // TO DO refactor into one reusable function
-export default function closeModal({ modals }) {
-  modals.forEach((modalCloseBtn) => {
+// look into even delegation
+export default function closeModal({ elements }) {
+  elements.forEach((modalCloseBtn) => {
     // console.log(modalCloseBtn.id);
     modalCloseBtn.addEventListener("click", () => {
       const modalId = modalCloseBtn.dataset.modalId;

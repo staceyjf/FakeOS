@@ -628,6 +628,7 @@ header {
   width: 100%;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 3px solid black;
 }
 .userNotes__container > div svg {
   margin-right: auto;
@@ -636,7 +637,7 @@ header {
   font-family: "Press Start 2P", system-ui;
   font-weight: 400;
   letter-spacing: 0.15em;
-  margin-top: 1em;
+  padding: 1em;
   text-align: center;
   flex: 1;
 }

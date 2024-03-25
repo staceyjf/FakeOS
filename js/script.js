@@ -25,7 +25,7 @@ function setupEventListeners() {
     jokeParagraph,
   });
   closeModal({
-    modals: modalCloseBtns,
+    elements: modalCloseBtns,
   });
   handleNotesSubmission();
   handleJokeSubmit(jokeParagraph);

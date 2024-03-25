@@ -21,6 +21,7 @@
       width: 100%;
       justify-content: space-between;
       align-items: center;
+      border-bottom: 3px solid black;
 
       & svg {
         margin-right: auto;
@@ -28,7 +29,7 @@
 
       & .userNotes__header {
         @include bv.font--primary(400);
-        margin-top: 1em;
+        padding: 1em;
         text-align: center;
         flex: 1;
       }

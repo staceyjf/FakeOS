@@ -86,5 +86,22 @@ export default function createNotes(userHeader, userBody) {
   //   },
   // });
 
-  hidModal(notes);
+  hidModal(notes); // hid the note app to display the users notes
+  addUserNotesEventListner(`${userNotesId}Btn--close`, userNotesId);
+}
+
+function addUserNotesEventListner(modalCloseBtnId, modalId) {
+  const modalCloseBtn = document.getElementById(modalCloseBtnId);
+  if (modalCloseBtn) {
+    modalCloseBtn.addEventListener("click", () => {
+      const modalEl = document.getElementById(modalId);
+      if (modalEl) {
+        hidModal(modalEl);
+      } else {
+        console.error("No element was found with id " + modalId);
+      }
+    });
+  } else {
+    console.error("No element was found with id " + modalCloseBtnId);
+  }
 }
