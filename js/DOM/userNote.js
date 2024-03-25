@@ -1,47 +1,38 @@
 import { createElement } from "./utils.js";
+import { hidModal } from "./modalHandlerClose.js";
 
 export default function createNotes(userHeader, userBody) {
   console.log("header: " + userHeader);
   console.log("userBody: " + userBody);
 
   const desktop = document.querySelector(".desktop");
-
   const userNotesId = userHeader.replace(/\s/g, "").trim(); // remove any whitespace
 
-  //create the note__container
+  //create modal div
   const modalEl = createElement({
     elType: "div",
     parent: desktop,
-    id: userNotesId, // give it an identifer so we can open it
-    className: "modal userNotes",
+    id: userNotesId, // give it an identifier so we can open it
+    className: "modal show userNotes",
   });
 
   //create the note__container
   const userNoteContainerEl = createElement({
     elType: "div",
     parent: modalEl,
-    className: "notes__container",
+    className: "userNotes__container",
   });
 
-  // create close button
-  // Create the rect element
-  const rectEl = createElement({
-    elType: "rect",
-    parent: document.createElementNS("http://www.w3.org/2000/svg", "svg"), // Temporary parent
-    attributes: {
-      x: "0.5",
-      y: "0.5",
-      width: "15",
-      height: "15",
-      fill: "white",
-      stroke: "black",
-    },
-  });
-
-  // create close button
-  createElement({
-    elType: "svg",
+  //create the note__container
+  const headerDivEl = createElement({
+    elType: "div",
     parent: userNoteContainerEl,
+  });
+
+  // create close button
+  const closeSvgEl = createElement({
+    elType: "svg",
+    parent: headerDivEl,
     id: `${userNotesId}Btn--close`,
     className: "modal--close",
     attributes: {
@@ -52,15 +43,28 @@ export default function createNotes(userHeader, userBody) {
       fill: "none",
       xmlns: "http://www.w3.org/2000/svg",
     },
-    children: [rectEl],
+  });
+
+  // Create the rect element
+  createElement({
+    elType: "rect",
+    parent: closeSvgEl,
+    attributes: {
+      x: "0.5",
+      y: "0.5",
+      width: "15",
+      height: "15",
+      fill: "white",
+      stroke: "black",
+    },
   });
 
   // create header
   createElement({
     elType: "h3",
     text: userHeader,
-    parent: userNoteContainerEl,
-    className: "notes__header",
+    parent: headerDivEl,
+    className: "userNotes__header",
   });
 
   // create body text
@@ -68,18 +72,19 @@ export default function createNotes(userHeader, userBody) {
     elType: "p",
     text: userBody,
     parent: userNoteContainerEl,
-    className: "notes__text",
+    className: "userNotes__text",
   });
 
-  //create icon
-  createElement({
-    elType: "button",
-    text: userHeader.trim(),
-    parent: desktop,
-    className: "icon",
-    id: `notes${userNotesId}Btn`,
-    attributes: {
-      "data-modal-id": userNotesId,
-    },
-  });
+  //create icon - TO DO
+  // createElement({
+  //   elType: "button",
+  //   parent: desktop,
+  //   className: "icon",
+  //   id: `notes${userNotesId}Btn`,
+  //   attributes: {
+  //     "data-modal-id": userNotesId,
+  //   },
+  // });
+
+  hidModal(notes);
 }

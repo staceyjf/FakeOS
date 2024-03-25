@@ -33,6 +33,6 @@ export default function closeModal({ modals }) {
 }
 
 // close
-function hidModal(modalEl) {
+export function hidModal(modalEl) {
   modalEl.classList.remove("show");
 }

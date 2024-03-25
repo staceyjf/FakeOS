@@ -332,7 +332,7 @@ template {
   box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.9);
 }
 
-.chuck__container {
+.chuck__container, .userNotes__container {
   border: 8px solid black;
   border-radius: 10px 10px 0 0;
 }
@@ -608,6 +608,47 @@ header {
 }
 .notes__container form button {
   max-width: 35%;
+}
+
+.userNotes__container {
+  background-color: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  row-gap: 1em;
+  border-top: 3px solid black;
+  margin-top: 0.2em;
+}
+.userNotes__container > div {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.userNotes__container > div svg {
+  margin-right: auto;
+}
+.userNotes__container > div .userNotes__header {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  margin-top: 1em;
+  text-align: center;
+  flex: 1;
+}
+.userNotes__container .userNotes__text {
+  font-family: "IBM Plex Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+  margin-top: 1em;
+  text-align: center;
+  width: 100%;
+  padding: 2em;
+  min-height: 25em;
 }
 
 .chuck__container {

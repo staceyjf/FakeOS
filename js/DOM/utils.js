@@ -9,9 +9,16 @@ export function createElement({
   className,
   dataModalId,
   attributes,
-  children,
 }) {
-  const newEl = document.createElementNS("http://www.w3.org/2000/svg", elType);
+  let newEl;
+
+  if (elType === "svg" || elType === "rect") {
+    newEl = document.createElementNS("http://www.w3.org/2000/svg", elType);
+    if (className) newEl.classList.add(className); // SVG elements use classList.add
+  } else {
+    newEl = document.createElement(elType);
+    if (className) newEl.className = className;
+  }
 
   if (text) {
     const textNode = document.createTextNode(text);
@@ -19,18 +26,11 @@ export function createElement({
   }
 
   if (id) newEl.id = id;
-  if (className) newEl.className = className;
   if (dataModalId) newEl.setAttribute("data-modal-id", dataModalId);
 
   if (attributes) {
     for (const [key, value] of Object.entries(attributes)) {
       newEl.setAttribute(key, value);
-    }
-  }
-
-  if (children) {
-    for (const child of children) {
-      newEl.appendChild(child);
     }
   }
 
