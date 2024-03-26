@@ -1,29 +1,29 @@
 export default function calculateTimeDate() {
-  // refreshes every 1 sec to give the latest time
-
   let currentTime = new Date();
-  let hours = currentTime.getHours();
-  let minutes = currentTime.getMinutes();
-  let seconds = currentTime.getSeconds();
 
-  // to make it 6 digit format 00:00:00, pad with extra 0 if less than 10
-  hours = hours < 10 ? "0" + hours : hours;
-  minutes = minutes < 10 ? "0" + minutes : minutes;
-  seconds = seconds < 10 ? "0" + seconds : seconds;
+  console.log(currentTime);
 
-  const userTime = `${hours}:${minutes}:${seconds}`;
-  console.log(userTime); // Log the time
+  const userTime = currentTime.toLocaleTimeString("en-US", {
+    hour12: false,
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+  });
 
-  let year = currentTime.getFullYear();
-  let month = currentTime.getMonth() + 1; // Jan is 0 so need to +1 to reflect the calendar month
-  let day = currentTime.getDate(); // to get the day as getDay returns a number eg 0 is Monday
+  // console.log(userTime);
 
-  // to make it 6 digit format 00/00/00, pad with extra 0 if less than 10
-  day = day < 10 ? "0" + day : day;
-  month = month < 10 ? "0" + month : month;
+  const userDate = currentTime.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  });
 
-  const userDate = `${day}.${month}.${year}`;
-  console.log(userDate); // Log the date
+  console.log(userDate);
 
-  return { userDate, userTime };
+  // replace '/' with '.' for macintosh format
+  const formattedUserDate = userDate.replace(/\//g, ".");
+
+  // console.log(formattedUserDate);
+
+  return { formattedUserDate, userTime };
 }

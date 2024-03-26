@@ -9,7 +9,7 @@ export function updateClockEl() {
 
   setInterval(() => {
     const timeDateObj = calculateTimeDate();
-    const date = timeDateObj.userDate;
+    const date = timeDateObj.formattedUserDate;
     const time = timeDateObj.userTime;
 
     // update
