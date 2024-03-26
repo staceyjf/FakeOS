@@ -17,8 +17,12 @@ export function updateClockEl(
       timeString.slice(8, 10)
     ).replace(/\//g, ".");
 
+    console.log(formattedDateStr);
+
     // slice to this 21:44:26
     const formattedTimeStr = timeString.slice(12);
+
+    console.log(formattedTimeStr);
 
     // update
     clockTime
