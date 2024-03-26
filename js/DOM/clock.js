@@ -1,45 +1,33 @@
 import { createElement } from "./utils.js";
+import calculateTimeDate from "../logic/fetchTime.js";
 
-export function updateClockEl(
-  calculateTimeDate,
-  clockDate,
-  clockTime,
-  clockContainer
-) {
-  // refreshes every 1 sec to give the latest time
+//passed my dom elements from scripts.js / using thing function to initialise the clock
+export function updateClockEl() {
+  const clockDate = document.querySelector("#clockDate");
+  const clockTime = document.querySelector("#clockTime");
+  const clockContainer = document.querySelector("#clockContainer");
+
   setInterval(() => {
-    const timeString = calculateTimeDate();
-
-    // modify 19/03/2024 to 19.03.24
-    const formattedDateStr = (
-      timeString.slice(0, 5) +
-      "." +
-      timeString.slice(8, 10)
-    ).replace(/\//g, ".");
-
-    console.log(formattedDateStr);
-
-    // slice to this 21:44:26
-    const formattedTimeStr = timeString.slice(12);
-
-    console.log(formattedTimeStr);
+    const timeDateObj = calculateTimeDate();
+    const date = timeDateObj.userDate;
+    const time = timeDateObj.userTime;
 
     // update
     clockTime
-      ? (clockTime.innerText = formattedTimeStr)
+      ? (clockTime.innerText = time)
       : createElement({
           elType: "div",
-          text: formattedTimeStr,
+          text: time,
           parent: clockContainer,
           id: "clockTime",
           className: "clock__display",
         });
 
     clockDate
-      ? (clockDate.innerText = formattedDateStr)
+      ? (clockDate.innerText = date)
       : createElement({
           elType: "div",
-          text: formattedDateStr,
+          text: date,
           parent: clockContainer,
           id: "clockDate",
           className: "clock__display",

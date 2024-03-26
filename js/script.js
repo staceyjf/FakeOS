@@ -15,9 +15,6 @@ const modalCloseBtns = document.querySelectorAll(".modal--close");
 const jokeParagraph = document.getElementById("chuckText");
 
 // clock
-const clockDate = document.querySelector("#clockDate");
-const clockTime = document.querySelector("#clockTime");
-const clockContainer = document.querySelector("#clockContainer");
 
 function setupEventListeners() {
   openModal({
@@ -33,7 +30,7 @@ function setupEventListeners() {
 }
 
 function initialize() {
-  updateClockEl(calculateTimeDate, clockDate, clockTime, clockContainer);
+  updateClockEl();
   setupEventListeners();
 }
 
